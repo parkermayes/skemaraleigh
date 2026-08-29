@@ -279,21 +279,45 @@ img{max-width:100%;display:block}
 /* ==========================================================================
    BELIEFS
    ========================================================================== */
-.creed{
-  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:clamp(28px,3.4vw,48px) clamp(32px,4.6vw,76px);
-  margin-top:clamp(38px,4.6vw,62px);
+.letter-wrap{
+  position:relative;
+  max-width:680px;
+  margin:clamp(38px,4.6vw,62px) auto 0;
 }
-.tenet{border-top:2px solid var(--ink);padding-top:clamp(16px,1.8vw,22px)}
-.tenet h3{
-  font-size:clamp(19px,1.95vw,26px);font-weight:800;
-  letter-spacing:-.025em;line-height:1.12;
+/* two sheets peeking out behind the letter */
+.letter-wrap::before,
+.letter-wrap::after{
+  content:"";position:absolute;inset:0;background:#fff;
+  box-shadow:0 2px 10px rgba(38,38,38,.05);
 }
-.tenet p{
-  font-size:clamp(14px,1.3vw,17px);line-height:1.55;
-  color:var(--grey);margin-top:10px;max-width:44ch;
+.letter-wrap::before{transform:translate(-15px,13px) rotate(-.7deg)}
+.letter-wrap::after{transform:translate(15px,7px) rotate(.55deg)}
+
+.letter{
+  position:relative;z-index:1;background:#fff;
+  padding:clamp(30px,4.8vw,68px) clamp(26px,4.4vw,64px);
+  box-shadow:0 10px 34px rgba(38,38,38,.10);
+  text-align:left;
 }
-@media (max-width:760px){.creed{grid-template-columns:1fr}}
+.letter p{
+  font-size:clamp(15px,1.38vw,17.5px);
+  line-height:1.74;color:var(--ink);
+  margin-bottom:1.15em;max-width:58ch;
+}
+.letter p:last-of-type{margin-bottom:0}
+
+.sign{
+  margin-top:clamp(28px,3.2vw,40px);
+  padding-top:clamp(18px,2vw,24px);
+  border-top:1px solid var(--line);
+}
+.sign .n{display:block;font-weight:700;font-size:clamp(15px,1.35vw,17px);letter-spacing:-.015em}
+.sign .r{display:block;font-style:italic;color:var(--grey);font-size:clamp(13px,1.2vw,15px);margin-top:4px}
+
+@media (max-width:560px){
+  .letter-wrap::before{transform:translate(-7px,8px) rotate(-.7deg)}
+  .letter-wrap::after{transform:translate(7px,5px) rotate(.55deg)}
+}
 
 /* ==========================================================================
    FOOTER CTA
