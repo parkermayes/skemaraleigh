@@ -306,14 +306,6 @@ img{max-width:100%;display:block}
 }
 .letter p:last-of-type{margin-bottom:0}
 
-.sign{
-  margin-top:clamp(28px,3.2vw,40px);
-  padding-top:clamp(18px,2vw,24px);
-  border-top:1px solid var(--line);
-}
-.sign .n{display:block;font-weight:700;font-size:clamp(15px,1.35vw,17px);letter-spacing:-.015em}
-.sign .r{display:block;font-style:italic;color:var(--grey);font-size:clamp(13px,1.2vw,15px);margin-top:4px}
-
 @media (max-width:560px){
   .letter-wrap::before{transform:translate(-7px,8px) rotate(-.7deg)}
   .letter-wrap::after{transform:translate(7px,5px) rotate(.55deg)}
