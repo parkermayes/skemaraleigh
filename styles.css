@@ -305,6 +305,13 @@ img{max-width:100%;display:block}
   margin-bottom:1.15em;max-width:58ch;
 }
 .letter p:last-of-type{margin-bottom:0}
+.letter p.close{
+  margin-top:clamp(24px,2.8vw,34px);
+  padding-top:clamp(20px,2.4vw,28px);
+  border-top:1px solid var(--line);
+  font-size:clamp(17px,1.75vw,22px);font-weight:800;
+  letter-spacing:-.02em;line-height:1.32;
+}
 
 @media (max-width:560px){
   .letter-wrap::before{transform:translate(-7px,8px) rotate(-.7deg)}
