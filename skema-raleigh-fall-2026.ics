@@ -44,6 +44,19 @@ LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260901-club-leadership-application-deadline@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260902T035900Z
+DTEND:20260902T035959Z
+SUMMARY:Club Leadership Application Deadline · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Last day to apply for one of the six open club leadership roles
+ : President\, Vice President\, Events\, Marketing\, Partnerships and Commu
+ nity. No experience required for any of them. Apply here: https://forms.cl
+ oud.microsoft/e/FC6SxfznNm.\n\nhttps://www.skemaraleigh.com
+LOCATION:Online\, Applications are submitted online
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20260903-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260903T153000Z

@@ -53,6 +53,18 @@ const ONE_OFFS = [
     cta: { label: 'Apply Now', href: LINKS.accelerator },
   },
   {
+    date: '2026-09-01',
+    start: '2026-09-01T23:59:00-04:00',
+    end:   '2026-09-01T23:59:59-04:00',
+    time: 'Closes 11:59 PM',
+    name: 'Club Leadership Application Deadline',
+    track: 'club',
+    desc: 'Last day to apply for one of the six open club leadership roles: President, Vice President, Events, Marketing, Partnerships and Community. No experience required for any of them. <a href="' + LINKS.club + '" target="_blank" rel="noopener">Apply here</a>.',
+    where: 'Online',
+    address: 'Applications are submitted online',
+    cta: { label: 'Apply Now', href: LINKS.club },
+  },
+  {
     date: '2026-09-07',
     start: '2026-09-07T23:59:00-04:00',
     end:   '2026-09-07T23:59:59-04:00',
