@@ -12,10 +12,11 @@ DTSTART:20260825T213000Z
 DTEND:20260825T233000Z
 SUMMARY:Launch Night — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Kickoff for the whole campus. A local founder keynotes\, the se
- mester calendar is unveiled\, and applications open.\n\nhttps://skema-rale
- igh-production.up.railway.app
-LOCATION:Venture II\, Room 144\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-raleigh-production.up.railway.app
+ mester calendar is unveiled\, and applications open.\n\nhttps://www.skemar
+ aleigh.com
+LOCATION:Venture II\, Room 144 — Venture II\, Centennial Campus\, Raleigh
+ \, NC 27606
+URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
 UID:20260828-club-meetup@skema-raleigh
@@ -24,9 +25,10 @@ DTSTART:20260828T170000Z
 DTEND:20260828T180000Z
 SUMMARY:Club Meetup — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:First working meetup of the semester. Open roles discussed\, ev
- ent planning starts.\n\nhttps://skema-raleigh-production.up.railway.app
-LOCATION:Venture II\, AI Lab\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-raleigh-production.up.railway.app
+ ent planning starts.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab — Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
+URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
 UID:20260901-accelerator-interest-session@skema-raleigh
@@ -35,45 +37,48 @@ DTSTART:20260901T153000Z
 DTEND:20260901T163000Z
 SUMMARY:Accelerator Interest Session — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Everything about the 12-week accelerator\, answered in the room
- . Bring the questions you have not asked yet.\n\nhttps://skema-raleigh-pro
- duction.up.railway.app
-LOCATION:Venture II\, AI Lab\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-raleigh-production.up.railway.app
+ . Bring the questions you have not asked yet.\n\nhttps://www.skemaraleigh.
+ com
+LOCATION:Venture II\, AI Lab — Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
+URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
 UID:20260922-pitch-night@skema-raleigh
 DTSTAMP:20260829T120000Z
-DTSTART;VALUE=DATE:20260922
-DTEND;VALUE=DATE:20260923
+DTSTART:20260922T213000Z
+DTEND:20260922T233000Z
 SUMMARY:Pitch Night — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Campus-wide competition with invited students from partner Rale
- igh colleges. Local founders judge. Real cash prizes. (Time announced soon
- .)\n\nhttps://skema-raleigh-production.up.railway.app
-LOCATION:Raleigh campus\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-raleigh-production.up.railway.app
+ igh colleges. Local founders judge. Real cash prizes.\n\nhttps://www.skema
+ raleigh.com
+LOCATION:Venture II\, Room 144 — Venture II\, Centennial Campus\, Raleigh
+ \, NC 27606
+URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
 UID:20261027-ecosystem-night@skema-raleigh
 DTSTAMP:20260829T120000Z
-DTSTART;VALUE=DATE:20261027
-DTEND;VALUE=DATE:20261028
+DTSTART:20261027T213000Z
+DTEND:20261027T233000Z
 SUMMARY:Ecosystem Night — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:An evening with working founders at Raleigh Founded — walkabl
- e from campus. See real early-stage companies operating. (Time announced s
- oon.)\n\nhttps://skema-raleigh-production.up.railway.app
-LOCATION:Raleigh Founded\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-raleigh-production.up.railway.app
+ e from campus. See real early-stage companies operating.\n\nhttps://www.sk
+ emaraleigh.com
+LOCATION:Raleigh Founded — main classroom\, left as you walk in — 1017 
+ Main Campus Dr\, Suite 1650 (Partners I)\, Raleigh\, NC 27606
+URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
 UID:20261117-demo-day-showcase@skema-raleigh
 DTSTAMP:20260829T120000Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261118
+DTSTART:20261117T223000Z
+DTEND:20261118T003000Z
 SUMMARY:Demo Day & Showcase — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:The capstone. Every accelerator venture presents real traction\
- , streamed live to every SKEMA campus. (Time announced soon.)\n\nhttps://s
- kema-raleigh-production.up.railway.app
-LOCATION:Raleigh campus\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-raleigh-production.up.railway.app
+ , streamed live to every SKEMA campus.\n\nhttps://www.skemaraleigh.com
+LOCATION:Hunt Library — room TBD — 1070 Partners Way\, Raleigh\, NC 276
+ 06
+URL:https://www.skemaraleigh.com
 END:VEVENT
 END:VCALENDAR

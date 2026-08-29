@@ -10,7 +10,7 @@
 <meta property="og:description" content="A student club and a 12-week accelerator. Every date for Fall 2026.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/skema-logo.png">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
 
@@ -36,23 +36,14 @@
 <!-- ============================ HERO ============================ -->
 <section class="hero">
   <div class="wrap">
-    <p class="kicker">SKEMA Business School &middot; Raleigh &middot; Fall 2026</p>
-    <h1>Entrepreneurship is a skill.<span class="l2">Not a personality type.</span></h1>
+    <h1>Your hub for entrepreneurship at <span class="red">SKEMA&nbsp;Raleigh.</span></h1>
     <p class="lede">
-      SKEMA Entrepreneurs is live in Raleigh. A student-led, faculty-advised club and a
-      12&#8209;week accelerator, on Centennial Campus, in the middle of one of America&rsquo;s
-      strongest startup regions. Nobody who built something felt ready first.
+      Club meetups, pitch nights, the accelerator, and every date in between.
+      If it&rsquo;s happening in Raleigh, it&rsquo;s on this page.
     </p>
     <div class="cta-row">
-      <a class="btn" href="#calendar">See what&rsquo;s coming <span class="arw" aria-hidden="true">&rarr;</span></a>
-      <a class="btn btn--ghost" href="#choose">Club or accelerator?</a>
-    </div>
-
-    <div class="stats">
-      <div class="s"><div class="n">4</div><div class="t">flagship events this semester</div></div>
-      <div class="s"><div class="n">12&ndash;15</div><div class="t">ventures in the accelerator cohort</div></div>
-      <div class="s"><div class="n">6</div><div class="t">club leadership roles open now</div></div>
-      <div class="s"><div class="n">12</div><div class="t">weeks from idea to Demo Day</div></div>
+      <a class="btn" href="#calendar">Upcoming events <span class="arw" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn--ghost" href="#choose">Learn more</a>
     </div>
   </div>
 </section>
@@ -61,9 +52,11 @@
 <section class="nextup" aria-label="Next event">
   <div class="wrap">
     <span class="tag">Next up</span>
-    <span class="what" id="nextName">Accelerator Interest Session</span>
-    <span class="when" id="nextWhen">Tue, Sep 1 &middot; 11:30&ndash;12:30 &middot; Venture II, AI Lab</span>
-    <span class="count" id="nextCount"></span>
+    <span class="nu-main">
+      <span class="what" id="nextName"></span>
+      <span class="when" id="nextWhen"></span>
+    </span>
+    <div class="cd" id="cd" aria-live="off"></div>
   </div>
 </section>
 
@@ -73,11 +66,19 @@
     <div class="section-head">
       <p class="kicker">The semester</p>
       <h2 class="h2">Fall 2026.</h2>
-      <p class="lede">Every date, in one place. Everything is open to the whole campus unless it says otherwise &mdash; you do not need a company, a co&#8209;founder, or a plan to show up.</p>
+      <p class="lede">Click any event for the full details. Everything is open to the whole campus unless it says otherwise &mdash; you do not need a company, a co&#8209;founder, or a plan to show up.</p>
     </div>
 
-    <div class="cal" id="cal">
-      <!-- rows injected by app.js from the single source of truth in EVENTS -->
+    <div class="calgrid">
+      <div class="calgrid-top">
+        <button type="button" id="prevMonth" class="mnav" aria-label="Previous month">&larr;</button>
+        <h3 id="monthLabel" aria-live="polite"></h3>
+        <button type="button" id="nextMonth" class="mnav" aria-label="Next month">&rarr;</button>
+      </div>
+      <div class="dow" aria-hidden="true">
+        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+      </div>
+      <div class="grid" id="grid"></div>
     </div>
 
     <div class="weekly">
@@ -92,6 +93,9 @@
         <a class="btn btn--ghost" href="skema-raleigh-fall-2026.ics" download>Add all dates to calendar</a>
       </div>
     </div>
+
+    <p class="listhead">All semester dates</p>
+    <div class="cal" id="cal"></div>
   </div>
 </section>
 
@@ -279,6 +283,16 @@
   </div>
 </footer>
 
-<script src="app.js?v=2"></script>
+
+<!-- ============================ EVENT MODAL ============================ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="m-backdrop"></div>
+  <div class="m-panel">
+    <button type="button" class="m-close" aria-label="Close">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="app.js?v=3"></script>
 </body>
 </html>
