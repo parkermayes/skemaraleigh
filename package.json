@@ -5,8 +5,7 @@
   "description": "Landing page for SKEMA Entrepreneurs · Raleigh · Fall 2026",
   "scripts": {
     "start": "node server.js",
-    "build:ics": "node tools/build-ics.js",
-    "build:favicon": "python3 tools/build-favicon.py"
+    "build:ics": "node tools/build-ics.js"
   },
   "engines": { "node": ">=18" }
 }
