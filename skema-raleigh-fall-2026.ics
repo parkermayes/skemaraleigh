@@ -44,11 +44,11 @@ LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20260903-club-meeting@skema-raleigh
+UID:20260903-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260903T153000Z
 DTEND:20260903T162000Z
-SUMMARY:Club Meeting · SKEMA Entrepreneurs Raleigh
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
   in.\n\nhttps://www.skemaraleigh.com
@@ -57,14 +57,53 @@ LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20260917-club-meeting@skema-raleigh
+UID:20260907-accelerator-application-deadline@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260908T035900Z
+DTEND:20260908T035959Z
+SUMMARY:Accelerator Application Deadline · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Last day to apply for the Fall 2026 accelerator cohort. Applica
+ tions close at 11:59 PM and the cohort is selected the following week. App
+ ly here: https://forms.cloud.microsoft/e/5mdwPGDtFc.\n\nhttps://www.skemar
+ aleigh.com
+LOCATION:Online\, Applications are submitted online
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20260915-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260915T153000Z
+DTEND:20260915T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20260917-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260917T153000Z
 DTEND:20260917T162000Z
-SUMMARY:Club Meeting · SKEMA Entrepreneurs Raleigh
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
   in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20260922-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260922T153000Z
+DTEND:20260922T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
  C 27606
 URL:https://www.skemaraleigh.com
@@ -83,11 +122,24 @@ LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20261001-club-meeting@skema-raleigh
+UID:20260929-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260929T153000Z
+DTEND:20260929T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261001-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261001T153000Z
 DTEND:20261001T162000Z
-SUMMARY:Club Meeting · SKEMA Entrepreneurs Raleigh
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
   in.\n\nhttps://www.skemaraleigh.com
@@ -96,14 +148,66 @@ LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20261015-club-meeting@skema-raleigh
+UID:20261006-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261006T153000Z
+DTEND:20261006T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261013-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261013T153000Z
+DTEND:20261013T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261015-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261015T153000Z
 DTEND:20261015T162000Z
-SUMMARY:Club Meeting · SKEMA Entrepreneurs Raleigh
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
   in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261020-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261020T153000Z
+DTEND:20261020T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261027-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261027T153000Z
+DTEND:20261027T162000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
  C 27606
 URL:https://www.skemaraleigh.com
@@ -122,11 +226,11 @@ LOCATION:Raleigh Founded\, main classroom on the left as you walk in\, 1017
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20261029-club-meeting@skema-raleigh
+UID:20261029-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261029T153000Z
 DTEND:20261029T162000Z
-SUMMARY:Club Meeting · SKEMA Entrepreneurs Raleigh
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
   in.\n\nhttps://www.skemaraleigh.com
@@ -135,14 +239,53 @@ LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20261112-club-meeting@skema-raleigh
+UID:20261103-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261103T163000Z
+DTEND:20261103T172000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261110-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261110T163000Z
+DTEND:20261110T172000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261112-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261112T163000Z
 DTEND:20261112T172000Z
-SUMMARY:Club Meeting · SKEMA Entrepreneurs Raleigh
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
   in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261117-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261117T163000Z
+DTEND:20261117T172000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
  C 27606
 URL:https://www.skemaraleigh.com
@@ -156,6 +299,19 @@ SUMMARY:Demo Day & Showcase · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:The capstone. Every accelerator venture presents real traction\
  , streamed live to every SKEMA campus.\n\nhttps://www.skemaraleigh.com
 LOCATION:Hunt Library\, room TBD\, 1070 Partners Way\, Raleigh\, NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261124-accelerator-session@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261124T163000Z
+DTEND:20261124T172000Z
+SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
+ ve problems: first customers\, pricing\, US market entry. Never lecture-st
+ yle.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, AI Lab\, Venture II\, Centennial Campus\, Raleigh\, N
+ C 27606
 URL:https://www.skemaraleigh.com
 END:VEVENT
 END:VCALENDAR

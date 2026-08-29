@@ -181,9 +181,6 @@ img{max-width:100%;display:block}
 .section-head{max-width:70ch}
 .section-head .lede{margin-top:22px}
 
-.cal-foot{margin-top:clamp(24px,3vw,36px);display:flex;justify-content:center}
-@media (max-width:560px){.cal-foot .btn{width:100%;justify-content:center}}
-
 /* ==========================================================================
    CHOOSE  (club / accelerator toggle)
    ========================================================================== */

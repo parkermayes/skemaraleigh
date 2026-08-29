@@ -32,7 +32,7 @@ const ONE_OFFS = [
     date: '2026-08-28',
     start: '2026-08-28T13:00:00-04:00',
     end:   '2026-08-28T14:00:00-04:00',
-    time: '1:00 – 2:00 PM',
+    time: '1:00 to 2:00 PM',
     name: 'Club Meetup',
     track: 'club',
     desc: 'First working meetup of the semester. Open roles discussed, event planning starts.',
@@ -44,13 +44,25 @@ const ONE_OFFS = [
     date: '2026-09-01',
     start: '2026-09-01T11:30:00-04:00',
     end:   '2026-09-01T12:30:00-04:00',
-    time: '11:30 AM – 12:30 PM',
+    time: '11:30 AM to 12:30 PM',
     name: 'Accelerator Interest Session',
     track: 'accelerator',
     desc: 'Everything about the 12-week accelerator, answered in the room. Bring the questions you have not asked yet.',
     where: 'Venture II, AI Lab',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
     cta: { label: 'Apply to the accelerator', href: LINKS.accelerator },
+  },
+  {
+    date: '2026-09-07',
+    start: '2026-09-07T23:59:00-04:00',
+    end:   '2026-09-07T23:59:59-04:00',
+    time: 'Closes 11:59 PM',
+    name: 'Accelerator Application Deadline',
+    track: 'accelerator',
+    desc: 'Last day to apply for the Fall 2026 accelerator cohort. Applications close at 11:59 PM and the cohort is selected the following week. <a href="' + LINKS.accelerator + '" target="_blank" rel="noopener">Apply here</a>.',
+    where: 'Online',
+    address: 'Applications are submitted online',
+    cta: { label: 'Apply now', href: LINKS.accelerator },
   },
   {
     date: '2026-09-22',
@@ -122,7 +134,7 @@ const CLUB_MEETINGS = series({
   startTime: '11:30',
   endTime: '12:20',
   time: '11:30 AM to 12:20 PM',
-  name: 'Club Meeting',
+  name: 'Club Meetup',
   desc: 'Open working meeting for the Entrepreneurship Club. Planning the next event, role updates, and whatever the room needs. Anyone can walk in.',
   where: 'Venture II, AI Lab',
   address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
@@ -130,7 +142,23 @@ const CLUB_MEETINGS = series({
   cta: { label: 'Join the club', href: LINKS.club },
 });
 
-const EVENTS = [...ONE_OFFS, ...CLUB_MEETINGS]
+/* Accelerator cohort works every Tuesday, 11:30 to 12:20, Sep 15 through Nov 24. */
+const ACCELERATOR_SESSIONS = series({
+  first: '2026-09-15',
+  every: 1,
+  until: '2026-11-24',
+  startTime: '11:30',
+  endTime: '12:20',
+  time: '11:30 AM to 12:20 PM',
+  name: 'Accelerator Session',
+  desc: 'Weekly working session for the cohort. Real-time coaching on live problems: first customers, pricing, US market entry. Never lecture-style.',
+  where: 'Venture II, AI Lab',
+  address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
+  track: 'accelerator',
+  cta: { label: 'Apply to the accelerator', href: LINKS.accelerator },
+});
+
+const EVENTS = [...ONE_OFFS, ...CLUB_MEETINGS, ...ACCELERATOR_SESSIONS]
   .sort((a, b) => new Date(a.start) - new Date(b.start));
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -303,10 +331,9 @@ function openModal(dateIso, name) {
       <div><dt>Where</dt><dd>${ev.where}<br><span class="addr">${ev.address}</span></dd></div>
     </dl>
     <p class="m-desc">${ev.desc}</p>
-    <div class="m-cta">
-      ${isPast ? '' : `<a class="btn btn--red" href="${ev.cta.href}" target="_blank" rel="noopener">${ev.cta.label} <span class="arw" aria-hidden="true">&rarr;</span></a>`}
-      <a class="btn btn--ghost" href="skema-raleigh-fall-2026.ics" download>Add to calendar</a>
-    </div>`;
+    ${isPast ? '' : `<div class="m-cta">
+      <a class="btn btn--red" href="${ev.cta.href}" target="_blank" rel="noopener">${ev.cta.label} <span class="arw" aria-hidden="true">&rarr;</span></a>
+    </div>`}`;
 
   lastFocused = document.activeElement;
   modal.hidden = false;

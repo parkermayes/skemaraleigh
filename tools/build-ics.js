@@ -53,7 +53,11 @@ for (const e of EVENTS) {
   lines.push('DTSTART:' + utc(e.start));
   lines.push('DTEND:' + utc(e.end || e.start));
   lines.push(fold('SUMMARY:' + esc(e.name + ' · SKEMA Entrepreneurs Raleigh')));
-  lines.push(fold('DESCRIPTION:' + esc(e.desc) + '\\n\\n' + URL_BASE));
+  // descriptions may contain a link for the modal; .ics wants plain text
+  const plainDesc = e.desc
+    .replace(/<a [^>]*href="([^"]+)"[^>]*>(.*?)<\/a>/g, '$2: $1')
+    .replace(/<[^>]+>/g, '');
+  lines.push(fold('DESCRIPTION:' + esc(plainDesc) + '\\n\\n' + URL_BASE));
   lines.push(fold('LOCATION:' + esc(e.where + ', ' + e.address)));
   lines.push('URL:' + URL_BASE);
   lines.push('END:VEVENT');
