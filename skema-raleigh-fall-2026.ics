@@ -70,6 +70,21 @@ LOCATION:Online\, Applications are submitted online
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260914-triangle-startup-collective@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260914T220000Z
+DTEND:20260915T000000Z
+SUMMARY:Triangle Startup Collective · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Downtown Raleigh meetup where 50+ founders\, operators and inve
+ stors trade real stories from the early days. Guests share short\, raw les
+ sons\, then entrepreneurs in the room take the hot seat with live question
+ s about their own company and get direct answers. Food and drinks provided
+ \, 100 seats. Co-hosted by Parker Mayes.\n\nhttps://www.skemaraleigh.com
+LOCATION:Raleigh Founded\, North Street\, 509 W North St\, Suite 224\, Rale
+ igh\, NC 27603
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20260915-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260915T153000Z
@@ -145,6 +160,21 @@ DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
   in.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
   NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261005-triangle-startup-collective@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261005T220000Z
+DTEND:20261006T000000Z
+SUMMARY:Triangle Startup Collective · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Downtown Raleigh meetup where 50+ founders\, operators and inve
+ stors trade real stories from the early days. Guests share short\, raw les
+ sons\, then entrepreneurs in the room take the hot seat with live question
+ s about their own company and get direct answers. Food and drinks provided
+ \, 100 seats. Co-hosted by Parker Mayes.\n\nhttps://www.skemaraleigh.com
+LOCATION:Raleigh Founded\, North Street\, 509 W North St\, Suite 224\, Rale
+ igh\, NC 27603
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
@@ -249,6 +279,21 @@ DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  yle.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture I\, Room 106\, Venture I\, Centennial Campus\, Raleigh\, N
  C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261109-triangle-startup-collective@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261109T230000Z
+DTEND:20261110T010000Z
+SUMMARY:Triangle Startup Collective · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Downtown Raleigh meetup where 50+ founders\, operators and inve
+ stors trade real stories from the early days. Guests share short\, raw les
+ sons\, then entrepreneurs in the room take the hot seat with live question
+ s about their own company and get direct answers. Food and drinks provided
+ \, 100 seats. Co-hosted by Parker Mayes.\n\nhttps://www.skemaraleigh.com
+LOCATION:Raleigh Founded\, North Street\, 509 W North St\, Suite 224\, Rale
+ igh\, NC 27603
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT

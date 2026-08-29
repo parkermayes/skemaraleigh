@@ -79,7 +79,7 @@ img{max-width:100%;display:block}
    ========================================================================== */
 .site-header{
   position:sticky;top:0;z-index:50;
-  background:rgba(247,245,244,.92);
+  background:linear-gradient(rgba(231,67,60,.07),rgba(231,67,60,.07)),rgba(247,245,244,.92);
   backdrop-filter:saturate(180%) blur(12px);
   -webkit-backdrop-filter:saturate(180%) blur(12px);
   border-bottom:1px solid var(--line);
@@ -112,11 +112,19 @@ img{max-width:100%;display:block}
 /* ==========================================================================
    HERO
    ========================================================================== */
-.hero{padding:clamp(34px,5vw,72px) 0 clamp(48px,7vw,96px);text-align:center}
+.hero{
+  padding:clamp(40px,6vw,88px) 0 clamp(52px,7.5vw,104px);
+  text-align:center;position:relative;
+  /* warm red wash bleeding out of the top of the page, fading into paper */
+  background:
+    radial-gradient(88% 72% at 50% -4%, rgba(231,67,60,.22), rgba(231,67,60,.07) 46%, rgba(231,67,60,0) 74%),
+    radial-gradient(52% 46% at 90% 96%, rgba(231,67,60,.11), rgba(231,67,60,0) 72%),
+    var(--paper);
+}
 .hero h1{
-  font-size:clamp(30px,5vw,72px);
-  font-weight:800;letter-spacing:-.042em;line-height:1.04;
-  max-width:34ch;margin-inline:auto;
+  font-size:clamp(40px,7.6vw,108px);
+  font-weight:800;letter-spacing:-.045em;line-height:1;
+  max-width:20ch;margin-inline:auto;
 }
 .hero .lede{margin:clamp(22px,2.6vw,32px) auto 0;text-align:center;max-width:60ch}
 .hero .cta-row{

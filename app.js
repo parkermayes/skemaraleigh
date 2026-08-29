@@ -158,7 +158,24 @@ const ACCELERATOR_SESSIONS = series({
   cta: { label: 'Apply to the accelerator', href: LINKS.accelerator },
 });
 
-const EVENTS = [...ONE_OFFS, ...CLUB_MEETINGS, ...ACCELERATOR_SESSIONS]
+/* Triangle Startup Collective, co-hosted by Parker Mayes at Raleigh Founded on
+   North Street. A community event rather than SKEMA programming, so it sits on
+   the calendar but is kept out of the next-up banner. */
+const STARTUP_COLLECTIVE = ['2026-09-14', '2026-10-05', '2026-11-09'].map(date => ({
+  date,
+  start: `${date}T18:00:00${offsetFor(date)}`,
+  end:   `${date}T20:00:00${offsetFor(date)}`,
+  time: '6:00 to 8:00 PM',
+  name: 'Triangle Startup Collective',
+  desc: 'Downtown Raleigh meetup where 50+ founders, operators and investors trade real stories from the early days. Guests share short, raw lessons, then entrepreneurs in the room take the hot seat with live questions about their own company and get direct answers. Food and drinks provided, 100 seats. Co-hosted by Parker Mayes.',
+  where: 'Raleigh Founded, North Street',
+  address: '509 W North St, Suite 224, Raleigh, NC 27603',
+  track: 'club',
+  inBanner: false,
+  cta: { label: 'RSVP on Meetup', href: 'https://www.meetup.com/triangle-startup-collective/' },
+}));
+
+const EVENTS = [...ONE_OFFS, ...CLUB_MEETINGS, ...ACCELERATOR_SESSIONS, ...STARTUP_COLLECTIVE]
   .sort((a, b) => new Date(a.start) - new Date(b.start));
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -185,7 +202,9 @@ const isoOf = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}
 function nextEvent(track) {
   const now = Date.now();
   return EVENTS.find(e =>
-    (!track || e.track === track) && new Date(e.end || e.start).getTime() > now) || null;
+    e.inBanner !== false &&
+    (!track || e.track === track) &&
+    new Date(e.end || e.start).getTime() > now) || null;
 }
 
 const TRACKS = [
