@@ -15,13 +15,14 @@ const LINKS = {
   list:        'https://forms.cloud.microsoft/e/wnPZEM1FtH',
 };
 
-const EVENTS = [
+const ONE_OFFS = [
   {
     date: '2026-08-25',
     start: '2026-08-25T17:30:00-04:00',
     end:   '2026-08-25T19:30:00-04:00',
     time: '5:30 PM',
     name: 'Launch Night',
+    track: 'club',
     desc: 'Kickoff for the whole campus. A local founder keynotes, the semester calendar is unveiled, and applications open.',
     where: 'Venture II, Room 144',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
@@ -33,6 +34,7 @@ const EVENTS = [
     end:   '2026-08-28T14:00:00-04:00',
     time: '1:00 – 2:00 PM',
     name: 'Club Meetup',
+    track: 'club',
     desc: 'First working meetup of the semester. Open roles discussed, event planning starts.',
     where: 'Venture II, AI Lab',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
@@ -44,6 +46,7 @@ const EVENTS = [
     end:   '2026-09-01T12:30:00-04:00',
     time: '11:30 AM – 12:30 PM',
     name: 'Accelerator Interest Session',
+    track: 'accelerator',
     desc: 'Everything about the 12-week accelerator, answered in the room. Bring the questions you have not asked yet.',
     where: 'Venture II, AI Lab',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
@@ -55,6 +58,7 @@ const EVENTS = [
     end:   '2026-09-22T19:30:00-04:00',
     time: '5:30 PM',
     name: 'Pitch Night',
+    track: 'club',
     desc: 'Campus-wide competition with invited students from partner Raleigh colleges. Local founders judge. Real cash prizes.',
     where: 'Venture II, Room 144',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
@@ -66,8 +70,9 @@ const EVENTS = [
     end:   '2026-10-27T19:30:00-04:00',
     time: '5:30 PM',
     name: 'Ecosystem Night',
-    desc: 'An evening with working founders at Raleigh Founded — walkable from campus. See real early-stage companies operating.',
-    where: 'Raleigh Founded — main classroom, left as you walk in',
+    track: 'club',
+    desc: 'An evening with working founders at Raleigh Founded, walkable from campus. See real early-stage companies operating.',
+    where: 'Raleigh Founded, main classroom on the left as you walk in',
     address: '1017 Main Campus Dr, Suite 1650 (Partners I), Raleigh, NC 27606',
     cta: { label: 'Get the details', href: LINKS.list },
   },
@@ -77,12 +82,56 @@ const EVENTS = [
     end:   '2026-11-17T19:30:00-05:00',
     time: '5:30 PM',
     name: 'Demo Day & Showcase',
+    track: 'accelerator',
     desc: 'The capstone. Every accelerator venture presents real traction, streamed live to every SKEMA campus.',
-    where: 'Hunt Library — room TBD',
+    where: 'Hunt Library, room TBD',
     address: '1070 Partners Way, Raleigh, NC 27606',
     cta: { label: 'Get the details', href: LINKS.list },
   },
 ];
+
+/* --------------------------------------------------------------------------
+   Recurring series. `every` is in weeks; `skip` drops individual dates.
+   DST: America/New_York is -04:00 until Nov 1 2026, -05:00 after.
+   -------------------------------------------------------------------------- */
+const offsetFor = iso => (iso < '2026-11-01' ? '-04:00' : '-05:00');
+
+function series({ first, every, until, skip = [], startTime, endTime, ...rest }) {
+  const out = [];
+  const stop = new Date(until + 'T12:00:00');
+  for (let d = new Date(first + 'T12:00:00'); d <= stop; d.setDate(d.getDate() + every * 7)) {
+    const iso = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    if (skip.includes(iso)) continue;
+    out.push({
+      ...rest,
+      date: iso,
+      start: `${iso}T${startTime}:00${offsetFor(iso)}`,
+      end: `${iso}T${endTime}:00${offsetFor(iso)}`,
+    });
+  }
+  return out;
+}
+
+/* Club meets every other Thursday, 11:30 to 12:20, through November.
+   Nov 26 is Thanksgiving, so it is skipped. */
+const CLUB_MEETINGS = series({
+  first: '2026-09-03',
+  every: 2,
+  until: '2026-11-30',
+  skip: ['2026-11-26'],
+  startTime: '11:30',
+  endTime: '12:20',
+  time: '11:30 AM to 12:20 PM',
+  name: 'Club Meeting',
+  desc: 'Open working meeting for the Entrepreneurship Club. Planning the next event, role updates, and whatever the room needs. Anyone can walk in.',
+  where: 'Venture II, AI Lab',
+  address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
+  track: 'club',
+  cta: { label: 'Join the club', href: LINKS.club },
+});
+
+const EVENTS = [...ONE_OFFS, ...CLUB_MEETINGS]
+  .sort((a, b) => new Date(a.start) - new Date(b.start));
 
 const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 const MON_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -104,61 +153,77 @@ const startOfToday = () => { const n = new Date(); return new Date(n.getFullYear
 const eventsOn = iso => EVENTS.filter(e => e.date === iso);
 const isoOf = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 
-/* the next event that has not finished yet */
-function nextEvent() {
+/* the next event that has not finished yet, overall or within one track */
+function nextEvent(track) {
   const now = Date.now();
-  return EVENTS.find(e => new Date(e.end || e.start).getTime() > now) || null;
+  return EVENTS.find(e =>
+    (!track || e.track === track) && new Date(e.end || e.start).getTime() > now) || null;
 }
+
+const TRACKS = [
+  { key: 'accelerator', label: 'Next up · Accelerator' },
+  { key: 'club',        label: 'Next up · Club' },
+];
 
 /* ============================================================ live countdown */
 let countdownTimer = null;
 
-function renderCountdown() {
-  const ev = nextEvent();
-  const nameEl = document.getElementById('nextName');
-  const whenEl = document.getElementById('nextWhen');
-  const cdEl   = document.getElementById('cd');
-  if (!nameEl || !whenEl || !cdEl) return;
+function segments(msLeft) {
+  let sec = Math.floor(msLeft / 1000);
+  const days = Math.floor(sec / 86400); sec -= days * 86400;
+  const hrs  = Math.floor(sec / 3600);  sec -= hrs * 3600;
+  const mins = Math.floor(sec / 60);    sec -= mins * 60;
+  return [[days,'days'],[hrs,'hrs'],[mins,'min'],[sec,'sec']]
+    .map(([v,l]) => `<span class="seg"><b>${String(v).padStart(2,'0')}</b><i>${l}</i></span>`)
+    .join('');
+}
 
-  if (!ev) {
-    nameEl.textContent = 'That’s the semester.';
-    whenEl.textContent = 'Spring dates announced soon — join the list to get them first.';
-    cdEl.hidden = true;
-    if (countdownTimer) clearInterval(countdownTimer);
-    return;
-  }
+function renderCountdowns() {
+  const host = document.getElementById('nextup');
+  if (!host) return;
 
-  const d = parseDay(ev.date);
-  nameEl.textContent = ev.name;
-  whenEl.textContent = `${DAYS[d.getDay()]}, ${MON_SHORT[d.getMonth()]} ${d.getDate()} · ${ev.time} · ${ev.where}`;
+  const live = TRACKS.map(t => ({ ...t, ev: nextEvent(t.key) }));
 
-  const startMs = new Date(ev.start).getTime();
-  const endMs = new Date(ev.end || ev.start).getTime();
+  host.innerHTML = live.map(({ key, label, ev }) => {
+    if (!ev) {
+      return `<div class="nu-col" data-track="${key}">
+          <span class="tag">${label}</span>
+          <span class="what">Nothing left this semester</span>
+          <span class="when">Spring dates announced soon. Join the list to get them first.</span>
+        </div>`;
+    }
+    const d = parseDay(ev.date);
+    return `<div class="nu-col" data-track="${key}">
+        <span class="tag">${label}</span>
+        <span class="what">${ev.name}</span>
+        <span class="when">${DAYS[d.getDay()]}, ${MON_SHORT[d.getMonth()]} ${d.getDate()} · ${ev.time} · ${ev.where}</span>
+        <span class="cd" data-start="${new Date(ev.start).getTime()}" data-end="${new Date(ev.end || ev.start).getTime()}"></span>
+      </div>`;
+  }).join('');
+
+  if (countdownTimer) clearInterval(countdownTimer);
 
   function tick() {
     const now = Date.now();
+    let rolled = false;
 
-    // event is running right now
-    if (now >= startMs) {
-      cdEl.classList.add('is-live');
-      cdEl.innerHTML = '<span class="livenow">Happening now</span>';
-      if (now >= endMs) { clearInterval(countdownTimer); renderCountdown(); } // roll to the next one
-      return;
-    }
+    host.querySelectorAll('.cd').forEach(el => {
+      const startMs = Number(el.dataset.start);
+      const endMs = Number(el.dataset.end);
 
-    let s = Math.floor((startMs - now) / 1000);
-    const days = Math.floor(s / 86400); s -= days * 86400;
-    const hrs  = Math.floor(s / 3600);  s -= hrs * 3600;
-    const mins = Math.floor(s / 60);    s -= mins * 60;
+      if (now >= endMs) { rolled = true; return; }        // event finished — rebuild
+      if (now >= startMs) {
+        el.classList.add('is-live');
+        el.innerHTML = '<span class="livenow">Happening now</span>';
+        return;
+      }
+      el.classList.remove('is-live');
+      el.innerHTML = segments(startMs - now);
+    });
 
-    cdEl.innerHTML = [[days,'days'],[hrs,'hrs'],[mins,'min'],[s,'sec']]
-      .map(([v,l]) => `<span class="seg"><b>${String(v).padStart(2,'0')}</b><i>${l}</i></span>`)
-      .join('');
+    if (rolled) renderCountdowns();
   }
 
-  cdEl.hidden = false;
-  cdEl.classList.remove('is-live');
-  if (countdownTimer) clearInterval(countdownTimer);
   tick();
   countdownTimer = setInterval(tick, 1000);
 }
@@ -295,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
   viewYear = Math.floor(opening / 12);
   viewMonth = opening % 12;
 
-  renderCountdown();
+  renderCountdowns();
   renderGrid();
   initTabs();
 

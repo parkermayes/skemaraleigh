@@ -8,16 +8,11 @@ const path = require('path');
 const root = path.join(__dirname, '..');
 const src = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
 
-const grab = (name, open, close) => {
-  const m = src.match(new RegExp(`const ${name} = (\\${open}[\\s\\S]*?\\n\\${close});`));
-  if (!m) throw new Error(`Could not find the ${name} block in app.js`);
-  return m[1];
-};
-
-// EVENTS references LINKS, so both are evaluated together
+/* Evaluate everything from LINKS through the merged EVENTS list, so recurring
+   series expand exactly the same way here as they do in the browser. */
+const block = src.slice(src.indexOf('const LINKS'), src.indexOf('const MONTHS'));
 // eslint-disable-next-line no-eval -- our own source file
-const { EVENTS } = eval(`(() => { const LINKS = ${grab('LINKS', '{', '}')};
-  const EVENTS = ${grab('EVENTS', '[', ']')}; return { EVENTS }; })()`);
+const EVENTS = eval(block + '; EVENTS');
 
 const PRODID = '-//SKEMA Entrepreneurs Raleigh//Fall 2026//EN';
 const STAMP = '20260829T120000Z';
@@ -47,7 +42,7 @@ const lines = [
   'PRODID:' + PRODID,
   'CALSCALE:GREGORIAN',
   'METHOD:PUBLISH',
-  'X-WR-CALNAME:SKEMA Entrepreneurs · Raleigh — Fall 2026',
+  'X-WR-CALNAME:SKEMA Entrepreneurs · Raleigh · Fall 2026',
   'X-WR-TIMEZONE:America/New_York',
 ];
 
@@ -57,9 +52,9 @@ for (const e of EVENTS) {
   lines.push('DTSTAMP:' + STAMP);
   lines.push('DTSTART:' + utc(e.start));
   lines.push('DTEND:' + utc(e.end || e.start));
-  lines.push(fold('SUMMARY:' + esc(e.name + ' — SKEMA Entrepreneurs Raleigh')));
+  lines.push(fold('SUMMARY:' + esc(e.name + ' · SKEMA Entrepreneurs Raleigh')));
   lines.push(fold('DESCRIPTION:' + esc(e.desc) + '\\n\\n' + URL_BASE));
-  lines.push(fold('LOCATION:' + esc(e.where + ' — ' + e.address)));
+  lines.push(fold('LOCATION:' + esc(e.where + ', ' + e.address)));
   lines.push('URL:' + URL_BASE);
   lines.push('END:VEVENT');
 }
