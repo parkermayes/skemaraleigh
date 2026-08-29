@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/parkermayes/Desktop/SKEMA Business School/**)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
