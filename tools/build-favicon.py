@@ -6,11 +6,14 @@ can never drift apart. Run: python3 tools/build-favicon.py
 """
 import math, os, zlib, struct
 
-INK   = (0x1C, 0x1B, 0x1A)
+INK   = (0x26, 0x26, 0x26)
 RED   = (0xE7, 0x43, 0x3C)
 DEEP  = (0xC9, 0x34, 0x2E)
 PAPER = (0xF7, 0xF5, 0xF4)
+TILE  = (0xEF, 0xEC, 0xEA)   # light tile, like a rounded app icon
 S = 128  # logical canvas
+ANGLE = 45                   # rocket flies up and to the right
+ZOOM  = 0.76                 # shrink so the rotated hull still clears the tile
 
 # ---------------------------------------------------------------- geometry
 def body_outline():
@@ -28,19 +31,31 @@ def body_outline():
         right.append((64 + w, y))
     return left + right[::-1]
 
+def place(pts):
+    """Rotate about the canvas centre by ANGLE, then scale by ZOOM."""
+    t = math.radians(ANGLE)
+    cos, sin = math.cos(t), math.sin(t)
+    out = []
+    for x, y in pts:
+        dx, dy = x - 64, y - 64
+        rx = dx * cos - dy * sin
+        ry = dx * sin + dy * cos
+        out.append((64 + rx * ZOOM, 64 + ry * ZOOM))
+    return out
+
 SHAPES = [
-    ('poly', body_outline(), RED),
-    ('poly', [(44, 74), (28, 102), (44, 97)], DEEP),          # left fin
-    ('poly', [(84, 74), (100, 102), (84, 97)], DEEP),         # right fin
-    ('poly', [(55, 104), (64, 126), (73, 104)], PAPER),       # exhaust
-    ('circle', (64, 55, 11), PAPER),                          # window
+    ('poly', place(body_outline()), RED),
+    ('poly', place([(44, 74), (26, 104), (44, 97)]), DEEP),     # trailing fin
+    ('poly', place([(84, 74), (102, 104), (84, 97)]), DEEP),    # leading fin
+    ('poly', place([(56, 104), (64, 124), (72, 104)]), INK),    # exhaust
+    ('circle', place([(64, 55)])[0] + (11 * ZOOM,), PAPER),     # window
 ]
 
 # ------------------------------------------------------------------- SVG
 def emit_svg(path):
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {S} {S}">',
-        f'  <rect width="{S}" height="{S}" rx="28" fill="rgb{INK}"/>',
+        f'  <rect width="{S}" height="{S}" rx="28" fill="rgb{TILE}"/>',
     ]
     for kind, data, color in SHAPES:
         if kind == 'poly':
@@ -82,7 +97,7 @@ def emit_png(path, size, ss=4):
             dy = max(28 - y, y - (S - 28), 0)
             if dx * dx + dy * dy > 28 * 28:
                 continue
-            col = INK
+            col = TILE
             for kind, data, c in SHAPES:
                 if kind == 'poly':
                     if inside_poly(data, x, y):
