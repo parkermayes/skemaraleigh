@@ -26,7 +26,7 @@ const ONE_OFFS = [
     desc: 'Kickoff for the whole campus. A local founder keynotes, the semester calendar is unveiled, and applications open.',
     where: 'Venture II, Room 144',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
-    cta: { label: 'Join the club', href: LINKS.club },
+    cta: { label: 'Join the Club', href: LINKS.club },
   },
   {
     date: '2026-08-28',
@@ -38,7 +38,7 @@ const ONE_OFFS = [
     desc: 'First working meetup of the semester. Open roles discussed, event planning starts.',
     where: 'Venture II, AI Lab',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
-    cta: { label: 'Apply for a role', href: LINKS.club },
+    cta: { label: 'Apply Now', href: LINKS.club },
   },
   {
     date: '2026-09-01',
@@ -50,7 +50,7 @@ const ONE_OFFS = [
     desc: 'Everything about the 12-week accelerator, answered in the room. Bring the questions you have not asked yet.',
     where: 'Venture II, AI Lab',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
-    cta: { label: 'Apply to the accelerator', href: LINKS.accelerator },
+    cta: { label: 'Apply Now', href: LINKS.accelerator },
   },
   {
     date: '2026-09-07',
@@ -62,7 +62,7 @@ const ONE_OFFS = [
     desc: 'Last day to apply for the Fall 2026 accelerator cohort. Applications close at 11:59 PM and the cohort is selected the following week. <a href="' + LINKS.accelerator + '" target="_blank" rel="noopener">Apply here</a>.',
     where: 'Online',
     address: 'Applications are submitted online',
-    cta: { label: 'Apply now', href: LINKS.accelerator },
+    cta: { label: 'Apply Now', href: LINKS.accelerator },
   },
   {
     date: '2026-09-23',
@@ -74,7 +74,7 @@ const ONE_OFFS = [
     desc: 'Campus-wide competition with invited students from partner Raleigh colleges. Local founders judge. Real cash prizes.',
     where: 'Venture II, Room 144',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
-    cta: { label: 'Get the details', href: LINKS.list },
+    cta: { label: 'Get Details', href: LINKS.list },
   },
   {
     date: '2026-10-27',
@@ -86,7 +86,7 @@ const ONE_OFFS = [
     desc: 'An evening with working founders at Raleigh Founded, walkable from campus. See real early-stage companies operating.',
     where: 'Raleigh Founded, main classroom on the left as you walk in',
     address: '1017 Main Campus Dr, Suite 1650 (Partners I), Raleigh, NC 27606',
-    cta: { label: 'Get the details', href: LINKS.list },
+    cta: { label: 'Get Details', href: LINKS.list },
   },
   {
     date: '2026-11-19',
@@ -98,7 +98,7 @@ const ONE_OFFS = [
     desc: 'The capstone. Every accelerator venture presents real traction, streamed live to every SKEMA campus.',
     where: 'Hunt Library, room TBD',
     address: '1070 Partners Way, Raleigh, NC 27606',
-    cta: { label: 'Get the details', href: LINKS.list },
+    cta: { label: 'Get Details', href: LINKS.list },
   },
 ];
 
@@ -139,7 +139,7 @@ const CLUB_MEETINGS = series({
   where: 'Venture II, Room 144',
   address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
   track: 'club',
-  cta: { label: 'Join the club', href: LINKS.club },
+  cta: { label: 'Join the Club', href: LINKS.club },
 });
 
 /* Accelerator cohort works every Tuesday, 11:30 to 12:20, Sep 15 through Nov 24. */
@@ -155,7 +155,7 @@ const ACCELERATOR_SESSIONS = series({
   where: 'Venture I, Room 106',
   address: 'Venture I, Centennial Campus, Raleigh, NC 27606',
   track: 'accelerator',
-  cta: { label: 'Apply to the accelerator', href: LINKS.accelerator },
+  cta: { label: 'Apply Now', href: LINKS.accelerator },
 });
 
 /* Triangle Startup Collective, co-hosted by Parker Mayes at Raleigh Founded on
