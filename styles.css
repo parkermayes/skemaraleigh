@@ -357,8 +357,9 @@ img{max-width:100%;display:block}
   letter-spacing:-.005em;transition:background .15s,transform .15s;
 }
 .chip:hover{background:var(--ink);transform:translateY(-1px)}
-.cell.is-past .chip{background:#CFC8C4;color:#fff}
-.cell.is-past .chip:hover{background:var(--grey)}
+.cell.has-ev-done{background:rgba(0,0,0,.022)}
+.chip.is-done{background:#CFC8C4;color:#fff}
+.chip.is-done:hover{background:var(--grey)}
 @media (max-width:700px){
   .cell{min-height:64px;padding:6px;gap:5px}
   .chip{padding:5px;font-size:9.5px}

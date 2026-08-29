@@ -59,6 +59,7 @@ const ONE_OFFS = [
     time: 'Closes 11:59 PM',
     name: 'Club Leadership Application Deadline',
     track: 'club',
+    inBanner: false,
     desc: 'Last day to apply for one of the six open club leadership roles: President, Vice President, Events, Marketing, Partnerships and Community. No experience required for any of them. <a href="' + LINKS.club + '" target="_blank" rel="noopener">Apply here</a>.',
     where: 'Online',
     address: 'Applications are submitted online',
@@ -71,6 +72,7 @@ const ONE_OFFS = [
     time: 'Closes 11:59 PM',
     name: 'Accelerator Application Deadline',
     track: 'accelerator',
+    inBanner: false,
     desc: 'Last day to apply for the Fall 2026 accelerator cohort. Applications close at 11:59 PM and the cohort is selected the following week. <a href="' + LINKS.accelerator + '" target="_blank" rel="noopener">Apply here</a>.',
     where: 'Online',
     address: 'Applications are submitted online',
@@ -311,14 +313,18 @@ function renderGrid() {
     const iso = isoOf(date);
     const evs = eventsOn(iso);
     const isPast = date < today;
+    const upcoming = evs.some(e => new Date(e.end || e.start) >= new Date());
     const cls = ['cell',
-      evs.length ? 'has-ev' : '',
+      upcoming ? 'has-ev' : '',
+      evs.length && !upcoming ? 'has-ev-done' : '',
       isPast ? 'is-past' : '',
       iso === todayIso ? 'is-today' : ''].filter(Boolean).join(' ');
 
-    const chips = evs.map(e =>
-      `<button class="chip" data-date="${e.date}" data-name="${e.name}">${e.name}</button>`
-    ).join('');
+    // grey per event, keyed on its end time, so a morning event dims that afternoon
+    const chips = evs.map(e => {
+      const done = new Date(e.end || e.start) < new Date();
+      return `<button class="chip${done ? ' is-done' : ''}" data-date="${e.date}" data-name="${e.name}">${e.name}</button>`;
+    }).join('');
 
     cells.push(`<div class="${cls}"><span class="num">${day}</span>${chips}</div>`);
   }
@@ -411,10 +417,12 @@ function initTabs() {
 
 /* ==================================================================== init */
 document.addEventListener('DOMContentLoaded', () => {
-  // open on the month of the next event, or the current month once the semester ends
-  const ev = nextEvent();
-  const anchor = ev ? parseDay(ev.date) : new Date();
-  const opening = clampMonth(monthIndex(anchor.getFullYear(), anchor.getMonth()));
+  // Open on the current month whenever the semester is running, so October
+  // lands on October even if the next event is not until November. Before or
+  // after the semester it clamps to the nearest month in range. Earlier months
+  // stay reachable with the arrows, and past events stay clickable.
+  const now = new Date();
+  const opening = clampMonth(monthIndex(now.getFullYear(), now.getMonth()));
   viewYear = Math.floor(opening / 12);
   viewMonth = opening % 12;
 
