@@ -174,63 +174,8 @@ img{max-width:100%;display:block}
 .section-head .kicker{margin-bottom:18px}
 .section-head .lede{margin-top:22px}
 
-.cal{margin-top:clamp(40px,5vw,68px)}
-.cal-row{
-  display:grid;
-  grid-template-columns:132px minmax(0,1fr) 200px 118px;
-  gap:clamp(16px,2.4vw,40px);
-  align-items:baseline;
-  padding-block:clamp(22px,2.4vw,30px);
-  border-top:1px solid var(--line);
-}
-.cal-row:last-of-type{border-bottom:1px solid var(--line)}
-.cal-row .date .d{
-  font-size:clamp(24px,2.5vw,34px);font-weight:800;letter-spacing:-.03em;line-height:1;
-}
-.cal-row .date .m{
-  font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--red);margin-top:8px;
-}
-.cal-row .ev .t{font-size:clamp(20px,2.3vw,32px);font-weight:800;letter-spacing:-.028em;line-height:1.1}
-.cal-row .ev .d{font-size:clamp(14px,1.25vw,17px);color:var(--grey);margin-top:10px;line-height:1.45;max-width:52ch}
-.cal-row .meta{font-size:clamp(13px,1.15vw,15px);color:var(--grey);line-height:1.45}
-.cal-row .meta b{display:block;color:var(--ink);font-weight:700}
-.cal-row .status{justify-self:start}
-.pill{
-  display:inline-block;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
-  padding:7px 11px;border:1.5px solid var(--line);color:var(--grey);white-space:nowrap;
-}
-.pill--next{background:var(--red);border-color:var(--red);color:#fff}
-.pill--done{border-color:var(--line);color:#B6AFAB}
-.cal-row.is-done{opacity:.5}
-.cal-row.is-done .date .m{color:#B6AFAB}
-.cal-row.is-next{background:linear-gradient(90deg,rgba(231,67,60,.07),rgba(231,67,60,0) 62%)}
-@media (max-width:900px){
-  .cal-row{grid-template-columns:96px minmax(0,1fr);grid-template-areas:"date ev" ". meta" ". status";row-gap:12px}
-  .cal-row .date{grid-area:date}
-  .cal-row .ev{grid-area:ev}
-  .cal-row .meta{grid-area:meta}
-  .cal-row .status{grid-area:status}
-}
-
-/* weekly band */
-.weekly{
-  margin-top:clamp(36px,4.4vw,60px);
-  border:2px solid var(--ink);
-  padding:clamp(24px,3.2vw,40px);
-  display:flex;align-items:center;gap:clamp(20px,3vw,48px);flex-wrap:wrap;
-}
-.days{display:flex;gap:8px}
-.days .day{
-  width:clamp(38px,4vw,52px);height:clamp(38px,4vw,52px);
-  border:2px solid var(--line);display:flex;align-items:center;justify-content:center;
-  font-size:clamp(13px,1.2vw,16px);font-weight:700;color:#BDB6B2;
-}
-.days .day.on{border-color:var(--red);background:var(--red);color:#fff}
-.weekly .txt .t{font-size:clamp(19px,2.1vw,28px);font-weight:800;letter-spacing:-.025em}
-.weekly .txt .s{font-size:clamp(13px,1.2vw,16px);color:var(--grey);margin-top:8px}
-.weekly .ics{margin-left:auto}
-@media (max-width:760px){.weekly .ics{margin-left:0;width:100%}.weekly .ics .btn{width:100%;justify-content:center}}
+.cal-foot{margin-top:clamp(24px,3vw,36px);display:flex;justify-content:center}
+@media (max-width:560px){.cal-foot .btn{width:100%;justify-content:center}}
 
 /* ==========================================================================
    CHOOSE  (club / accelerator toggle)
@@ -364,7 +309,8 @@ img{max-width:100%;display:block}
   font-family:inherit;font-size:16px;color:var(--ink);
   transition:background .15s,border-color .15s,color .15s;
 }
-.mnav:hover{background:var(--red);border-color:var(--red);color:#fff}
+.mnav:hover:not(:disabled){background:var(--red);border-color:var(--red);color:#fff}
+.mnav:disabled{opacity:.28;cursor:not-allowed}
 
 .dow{
   display:grid;grid-template-columns:repeat(7,1fr);
@@ -406,21 +352,6 @@ img{max-width:100%;display:block}
   .chip{padding:5px;font-size:9.5px}
   .dow span{padding:9px 6px;font-size:9px;letter-spacing:.1em}
 }
-
-.listhead{
-  font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--red);margin-top:clamp(44px,5.4vw,72px);
-}
-.cal{margin-top:20px}
-/* list rows are buttons now, so reset the button chrome */
-button.cal-row{
-  appearance:none;font-family:inherit;background:transparent;cursor:pointer;
-  width:100%;text-align:left;border-left:0;border-right:0;
-  transition:background .15s;
-}
-button.cal-row:hover{background:rgba(231,67,60,.05)}
-.cal-row .date,.cal-row .ev,.cal-row .meta,.cal-row .status{display:block}
-.cal-row .date .d,.cal-row .date .m,.cal-row .ev .t,.cal-row .ev .d{display:block}
 
 /* ---------- event modal ---------- */
 .modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px}

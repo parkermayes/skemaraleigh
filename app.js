@@ -89,6 +89,14 @@ const MON_SHORT = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','
 const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
 const DAYS_FULL = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
+/* The grid only spans the live semester — September through November 2026.
+   Extend RANGE when spring dates exist. */
+const RANGE = { from: { y: 2026, m: 8 }, to: { y: 2026, m: 10 } }; // m is 0-indexed
+const monthIndex = (y, m) => y * 12 + m;
+const RANGE_MIN = monthIndex(RANGE.from.y, RANGE.from.m);
+const RANGE_MAX = monthIndex(RANGE.to.y, RANGE.to.m);
+const clampMonth = i => Math.min(RANGE_MAX, Math.max(RANGE_MIN, i));
+
 /* Calendar dates are parsed at local noon so the day never shifts by timezone.
    Countdown math uses `start`, which carries a real offset. */
 const parseDay = iso => { const [y,m,d] = iso.split('-').map(Number); return new Date(y, m-1, d, 12); };
@@ -197,12 +205,16 @@ function renderGrid() {
   grid.innerHTML = cells.join('');
   grid.querySelectorAll('.chip').forEach(btn =>
     btn.addEventListener('click', () => openModal(btn.dataset.date, btn.dataset.name)));
+
+  const here = monthIndex(viewYear, viewMonth);
+  document.getElementById('prevMonth').disabled = here <= RANGE_MIN;
+  document.getElementById('nextMonth').disabled = here >= RANGE_MAX;
 }
 
 function shiftMonth(delta) {
-  const d = new Date(viewYear, viewMonth + delta, 1);
-  viewYear = d.getFullYear();
-  viewMonth = d.getMonth();
+  const target = clampMonth(monthIndex(viewYear, viewMonth) + delta);
+  viewYear = Math.floor(target / 12);
+  viewMonth = target % 12;
   renderGrid();
 }
 
@@ -245,34 +257,6 @@ function closeModal() {
   if (lastFocused) lastFocused.focus();
 }
 
-/* ============================================================== list below */
-function renderList() {
-  const host = document.getElementById('cal');
-  if (!host) return;
-  const today = startOfToday();
-  const next = nextEvent();
-
-  host.innerHTML = EVENTS.map(e => {
-    const d = parseDay(e.date);
-    const isDone = new Date(e.end || e.start) < new Date();
-    const isNext = next && e.date === next.date && e.name === next.name;
-    const cls = ['cal-row', isDone ? 'is-done' : '', isNext ? 'is-next' : ''].filter(Boolean).join(' ');
-    const pill = isNext ? '<span class="pill pill--next">Next up</span>'
-               : isDone ? '<span class="pill pill--done">Done</span>'
-               : '<span class="pill">Upcoming</span>';
-    return `
-      <button class="${cls}" data-date="${e.date}" data-name="${e.name}">
-        <span class="date"><span class="d">${d.getDate()}</span><span class="m">${MON_SHORT[d.getMonth()]} &middot; ${DAYS[d.getDay()]}</span></span>
-        <span class="ev"><span class="t">${e.name}</span><span class="d">${e.desc}</span></span>
-        <span class="meta"><b>${e.time}</b>${e.where}</span>
-        <span class="status">${pill}</span>
-      </button>`;
-  }).join('');
-
-  host.querySelectorAll('.cal-row').forEach(row =>
-    row.addEventListener('click', () => openModal(row.dataset.date, row.dataset.name)));
-}
-
 /* ==================================================================== tabs */
 function initTabs() {
   const tabs = Array.from(document.querySelectorAll('.switch [role="tab"]'));
@@ -307,12 +291,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // open on the month of the next event, or the current month once the semester ends
   const ev = nextEvent();
   const anchor = ev ? parseDay(ev.date) : new Date();
-  viewYear = anchor.getFullYear();
-  viewMonth = anchor.getMonth();
+  const opening = clampMonth(monthIndex(anchor.getFullYear(), anchor.getMonth()));
+  viewYear = Math.floor(opening / 12);
+  viewMonth = opening % 12;
 
   renderCountdown();
   renderGrid();
-  renderList();
   initTabs();
 
   document.getElementById('prevMonth')?.addEventListener('click', () => shiftMonth(-1));
