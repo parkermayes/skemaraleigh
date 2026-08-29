@@ -14,7 +14,7 @@ const EVENTS = eval(m[1]); // eslint-disable-line no-eval -- our own source file
 
 const PRODID = '-//SKEMA Entrepreneurs Raleigh//Fall 2026//EN';
 const STAMP = '20260829T120000Z';
-const URL_BASE = 'https://skema-entrepreneurs-raleigh.up.railway.app';
+const URL_BASE = 'https://skema-raleigh-production.up.railway.app';
 
 function fold(line) {
   // RFC 5545: octet-count lines at 75, continuation lines start with a space

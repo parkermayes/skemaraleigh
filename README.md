@@ -1,5 +1,7 @@
 # SKEMA Entrepreneurs · Raleigh
 
+**Live:** https://skema-raleigh-production.up.railway.app
+
 One-page landing site for SKEMA Entrepreneurs in Raleigh — Fall 2026 semester.
 Static HTML/CSS/JS served by a zero-dependency Node server.
 

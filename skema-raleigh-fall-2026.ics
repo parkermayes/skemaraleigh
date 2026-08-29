@@ -12,10 +12,10 @@ DTSTART:20260825T213000Z
 DTEND:20260825T233000Z
 SUMMARY:Launch Night — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Kickoff for the whole campus. A local founder keynotes\, the se
- mester calendar is unveiled\, and applications open.\n\nhttps://skema-entr
- epreneurs-raleigh.up.railway.app
+ mester calendar is unveiled\, and applications open.\n\nhttps://skema-rale
+ igh-production.up.railway.app
 LOCATION:Venture II\, Room 144\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-entrepreneurs-raleigh.up.railway.app
+URL:https://skema-raleigh-production.up.railway.app
 END:VEVENT
 BEGIN:VEVENT
 UID:20260828-club-meetup@skema-raleigh
@@ -24,9 +24,9 @@ DTSTART:20260828T170000Z
 DTEND:20260828T180000Z
 SUMMARY:Club Meetup — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:First working meetup of the semester. Open roles discussed\, ev
- ent planning starts.\n\nhttps://skema-entrepreneurs-raleigh.up.railway.app
+ ent planning starts.\n\nhttps://skema-raleigh-production.up.railway.app
 LOCATION:Venture II\, AI Lab\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-entrepreneurs-raleigh.up.railway.app
+URL:https://skema-raleigh-production.up.railway.app
 END:VEVENT
 BEGIN:VEVENT
 UID:20260901-accelerator-interest-session@skema-raleigh
@@ -35,10 +35,10 @@ DTSTART:20260901T153000Z
 DTEND:20260901T163000Z
 SUMMARY:Accelerator Interest Session — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Everything about the 12-week accelerator\, answered in the room
- . Bring the questions you have not asked yet.\n\nhttps://skema-entrepreneu
- rs-raleigh.up.railway.app
+ . Bring the questions you have not asked yet.\n\nhttps://skema-raleigh-pro
+ duction.up.railway.app
 LOCATION:Venture II\, AI Lab\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-entrepreneurs-raleigh.up.railway.app
+URL:https://skema-raleigh-production.up.railway.app
 END:VEVENT
 BEGIN:VEVENT
 UID:20260922-pitch-night@skema-raleigh
@@ -48,9 +48,9 @@ DTEND;VALUE=DATE:20260923
 SUMMARY:Pitch Night — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Campus-wide competition with invited students from partner Rale
  igh colleges. Local founders judge. Real cash prizes. (Time announced soon
- .)\n\nhttps://skema-entrepreneurs-raleigh.up.railway.app
+ .)\n\nhttps://skema-raleigh-production.up.railway.app
 LOCATION:Raleigh campus\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-entrepreneurs-raleigh.up.railway.app
+URL:https://skema-raleigh-production.up.railway.app
 END:VEVENT
 BEGIN:VEVENT
 UID:20261027-ecosystem-night@skema-raleigh
@@ -60,9 +60,9 @@ DTEND;VALUE=DATE:20261028
 SUMMARY:Ecosystem Night — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:An evening with working founders at Raleigh Founded — walkabl
  e from campus. See real early-stage companies operating. (Time announced s
- oon.)\n\nhttps://skema-entrepreneurs-raleigh.up.railway.app
+ oon.)\n\nhttps://skema-raleigh-production.up.railway.app
 LOCATION:Raleigh Founded\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-entrepreneurs-raleigh.up.railway.app
+URL:https://skema-raleigh-production.up.railway.app
 END:VEVENT
 BEGIN:VEVENT
 UID:20261117-demo-day-showcase@skema-raleigh
@@ -72,8 +72,8 @@ DTEND;VALUE=DATE:20261118
 SUMMARY:Demo Day & Showcase — SKEMA Entrepreneurs Raleigh
 DESCRIPTION:The capstone. Every accelerator venture presents real traction\
  , streamed live to every SKEMA campus. (Time announced soon.)\n\nhttps://s
- kema-entrepreneurs-raleigh.up.railway.app
+ kema-raleigh-production.up.railway.app
 LOCATION:Raleigh campus\, Centennial Campus\, Raleigh\, NC
-URL:https://skema-entrepreneurs-raleigh.up.railway.app
+URL:https://skema-raleigh-production.up.railway.app
 END:VEVENT
 END:VCALENDAR
