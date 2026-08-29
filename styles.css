@@ -279,12 +279,21 @@ img{max-width:100%;display:block}
 /* ==========================================================================
    BELIEFS
    ========================================================================== */
-.beliefs .stmt{
-  font-size:clamp(30px,5.4vw,74px);font-weight:800;letter-spacing:-.038em;line-height:1.06;
-  padding-block:clamp(30px,3.6vw,48px);border-top:1px solid var(--line);max-width:22ch;
+.creed{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(28px,3.4vw,48px) clamp(32px,4.6vw,76px);
+  margin-top:clamp(38px,4.6vw,62px);
 }
-.beliefs .stmt:last-of-type{border-bottom:1px solid var(--line)}
-.beliefs .stmt em{font-style:normal;color:var(--red)}
+.tenet{border-top:2px solid var(--ink);padding-top:clamp(16px,1.8vw,22px)}
+.tenet h3{
+  font-size:clamp(19px,1.95vw,26px);font-weight:800;
+  letter-spacing:-.025em;line-height:1.12;
+}
+.tenet p{
+  font-size:clamp(14px,1.3vw,17px);line-height:1.55;
+  color:var(--grey);margin-top:10px;max-width:44ch;
+}
+@media (max-width:760px){.creed{grid-template-columns:1fr}}
 
 /* ==========================================================================
    FOOTER CTA
