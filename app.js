@@ -11,7 +11,7 @@
 
 const LINKS = {
   club:        'https://forms.cloud.microsoft/e/FC6SxfznNm',
-  accelerator: 'https://forms.cloud.microsoft/e/5mdwPGDtFc',
+  accelerator: 'https://airtable.com/appNrxLoRfolsKUep/pag6OT126BZwe6Pf0/form',
   list:        'https://forms.cloud.microsoft/e/wnPZEM1FtH',
 };
 

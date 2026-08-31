@@ -38,7 +38,7 @@ stale cached copy.
 
 - Mailing list — https://forms.cloud.microsoft/e/wnPZEM1FtH
 - Club leadership application — https://forms.cloud.microsoft/e/FC6SxfznNm
-- Accelerator application — https://forms.cloud.microsoft/e/5mdwPGDtFc
+- Accelerator application — https://airtable.com/appNrxLoRfolsKUep/pag6OT126BZwe6Pf0/form
 
 ## Deploying
 
