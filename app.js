@@ -10,7 +10,6 @@
    ============================================================================= */
 
 const LINKS = {
-  club:        'https://forms.cloud.microsoft/e/FC6SxfznNm',
   accelerator: 'https://airtable.com/appNrxLoRfolsKUep/pag6OT126BZwe6Pf0/form',
   list:        'https://forms.cloud.microsoft/e/wnPZEM1FtH',
 };
@@ -26,7 +25,7 @@ const ONE_OFFS = [
     desc: 'Kickoff for the whole campus. A local founder keynotes, the semester calendar is unveiled, and applications open.',
     where: 'Venture II, Room 144',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
-    cta: { label: 'Join the Club', href: LINKS.club },
+    cta: { label: 'Join the List', href: LINKS.list },
   },
   {
     date: '2026-08-28',
@@ -38,7 +37,7 @@ const ONE_OFFS = [
     desc: 'First working meetup of the semester. Open roles discussed, event planning starts.',
     where: 'Venture II, AI Lab',
     address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
-    cta: { label: 'Apply Now', href: LINKS.club },
+    cta: { label: 'Join the List', href: LINKS.list },
   },
   {
     date: '2026-09-01',
@@ -60,10 +59,10 @@ const ONE_OFFS = [
     name: 'Club Leadership Application Deadline',
     track: 'club',
     inBanner: false,
-    desc: 'Last day to apply for one of the six open club leadership roles: President, Vice President, Events, Marketing, Partnerships and Community. No experience required for any of them. <a href="' + LINKS.club + '" target="_blank" rel="noopener">Apply here</a>.',
+    desc: 'Applications closed for the six club leadership roles. The elected board is Sasha Efimova (President), Savannah Ozer (Vice President), Apaarpreet Bajaj (Events), Xuan-Mai Nguyen (Marketing), Soren Thill (Partnerships) and Maxence Montigny (Community).',
     where: 'Online',
-    address: 'Applications are submitted online',
-    cta: { label: 'Apply Now', href: LINKS.club },
+    address: 'Applications were submitted online',
+    cta: { label: 'Join the List', href: LINKS.list },
   },
   {
     date: '2026-09-07',
@@ -153,7 +152,7 @@ const CLUB_MEETINGS = series({
   where: 'Venture II, Room 144',
   address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
   track: 'club',
-  cta: { label: 'Join the Club', href: LINKS.club },
+  cta: { label: 'Join the List', href: LINKS.list },
 });
 
 /* Accelerator cohort works every Tuesday, 11:30 to 12:20, Sep 15 through Nov 24. */

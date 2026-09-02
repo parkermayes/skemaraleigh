@@ -249,6 +249,21 @@ img{max-width:100%;display:block}
   margin-bottom:22px;
 }
 
+/* elected leadership */
+.team{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.4vw,34px) clamp(14px,1.8vw,26px)}
+@media (max-width:960px){.team{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.member{margin:0}
+.member img{
+  display:block;width:100%;max-width:132px;height:auto;aspect-ratio:1;border-radius:50%;
+  object-fit:cover;background:var(--line-dark);
+  border:2px solid var(--line-dark);transition:border-color .18s ease;
+}
+.member:hover img{border-color:var(--red)}
+.member figcaption{margin-top:14px}
+.member .n{font-size:clamp(15px,1.4vw,19px);font-weight:800;letter-spacing:-.02em;color:#fff;line-height:1.15}
+.member .r{font-size:clamp(12px,1.1vw,14px);color:var(--red);margin-top:6px;line-height:1.35;font-weight:700}
+
 /* 12-week phases */
 .phases{display:grid;gap:0;border-top:2px solid var(--line-dark)}
 .phase{display:grid;grid-template-columns:120px minmax(0,1fr);gap:clamp(16px,2.4vw,32px);

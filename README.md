@@ -20,7 +20,7 @@ No install step — there are no dependencies.
 | What | Where |
 |---|---|
 | **Event dates, times, locations, descriptions** | the `EVENTS` array at the top of `app.js` — the calendar, the "Next up" ribbon and the countdown all read from it |
-| Hero, beliefs, club roles, accelerator copy, FAQ | `index.html` |
+| Hero, beliefs, club leadership, accelerator copy, FAQ | `index.html` |
 | Colors, type, spacing | the `:root` block in `styles.css` |
 | Application / mailing-list links | search `forms.cloud.microsoft` in `index.html` |
 
@@ -37,8 +37,11 @@ stale cached copy.
 ## Current links
 
 - Mailing list — https://forms.cloud.microsoft/e/wnPZEM1FtH
-- Club leadership application — https://forms.cloud.microsoft/e/FC6SxfznNm
 - Accelerator application — https://airtable.com/appNrxLoRfolsKUep/pag6OT126BZwe6Pf0/form
+
+Club leadership elections closed September 1 2026; the elected board is listed in the
+club panel of `index.html`, with headshots in `assets/team/` (square source images,
+masked to circles in CSS).
 
 ## Deploying
 
