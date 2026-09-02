@@ -95,6 +95,18 @@ LOCATION:Online\, Applications are submitted online
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260911-accelerator-cohort-announced@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260911T160000Z
+DTEND:20260911T163000Z
+SUMMARY:Accelerator Cohort Announced · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:The Fall 2026 cohort is selected and announced: twelve ventures
+  for twelve weeks\, with the first weekly working session on September 15 
+ and Demo Day on November 19.\n\nhttps://www.skemaraleigh.com
+LOCATION:Online\, Announced online to everyone who applied
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20260914-triangle-startup-collective@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260914T220000Z
