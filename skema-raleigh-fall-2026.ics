@@ -49,12 +49,23 @@ DTSTAMP:20260829T120000Z
 DTSTART:20260902T035900Z
 DTEND:20260902T035959Z
 SUMMARY:Club Leadership Application Deadline · SKEMA Entrepreneurs Raleigh
-DESCRIPTION:Applications closed for the six club leadership roles. The elec
- ted board is Sasha Efimova (President)\, Savannah Ozer (Vice President)\, 
- Apaarpreet Bajaj (Events)\, Xuan-Mai Nguyen (Marketing)\, Soren Thill (Par
- tnerships) and Maxence Montigny (Community).\n\nhttps://www.skemaraleigh.c
- om
+DESCRIPTION:Applications closed for the six club leadership roles: Presiden
+ t\, Vice President\, Events\, Marketing\, Partnerships and Community. Resu
+ lts announced the following day.\n\nhttps://www.skemaraleigh.com
 LOCATION:Online\, Applications were submitted online
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20260902-club-leadership-announced@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260902T160000Z
+DTEND:20260902T163000Z
+SUMMARY:Club Leadership Announced · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:The results are in. Sasha Efimova (President)\, Savannah Ozer (
+ Vice President)\, Apaarpreet Bajaj (Events)\, Xuan-Mai Nguyen (Marketing)\
+ , Soren Thill (Partnerships) and Maxence Montigny (Community) are running 
+ the club this semester.\n\nhttps://www.skemaraleigh.com
+LOCATION:Online\, Announced online and at the next club meetup
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT

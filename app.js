@@ -59,10 +59,23 @@ const ONE_OFFS = [
     name: 'Club Leadership Application Deadline',
     track: 'club',
     inBanner: false,
-    desc: 'Applications closed for the six club leadership roles. The elected board is Sasha Efimova (President), Savannah Ozer (Vice President), Apaarpreet Bajaj (Events), Xuan-Mai Nguyen (Marketing), Soren Thill (Partnerships) and Maxence Montigny (Community).',
+    desc: 'Applications closed for the six club leadership roles: President, Vice President, Events, Marketing, Partnerships and Community. Results announced the following day.',
     where: 'Online',
     address: 'Applications were submitted online',
     cta: { label: 'Join the List', href: LINKS.list },
+  },
+  {
+    date: '2026-09-02',
+    start: '2026-09-02T12:00:00-04:00',
+    end:   '2026-09-02T12:30:00-04:00',
+    time: 'Noon',
+    name: 'Club Leadership Announced',
+    track: 'club',
+    inBanner: false,
+    desc: 'The results are in. Sasha Efimova (President), Savannah Ozer (Vice President), Apaarpreet Bajaj (Events), Xuan-Mai Nguyen (Marketing), Soren Thill (Partnerships) and Maxence Montigny (Community) are running the club this semester.',
+    where: 'Online',
+    address: 'Announced online and at the next club meetup',
+    cta: { label: 'Meet the Team', href: '#leadership' },
   },
   {
     date: '2026-09-07',
@@ -368,7 +381,9 @@ function openModal(dateIso, name) {
     </dl>
     <p class="m-desc">${ev.desc}</p>
     ${isPast ? '' : `<div class="m-cta">
-      <a class="btn btn--red" href="${ev.cta.href}" target="_blank" rel="noopener">${ev.cta.label} <span class="arw" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn--red" href="${ev.cta.href}" ${
+        ev.cta.href.startsWith('#') ? 'data-close-modal' : 'target="_blank" rel="noopener"'
+      }>${ev.cta.label} <span class="arw" aria-hidden="true">&rarr;</span></a>
     </div>`}`;
 
   lastFocused = document.activeElement;
@@ -382,7 +397,7 @@ function closeModal() {
   if (!modal || modal.hidden) return;
   modal.hidden = true;
   document.body.style.overflow = '';
-  if (lastFocused) lastFocused.focus();
+  if (lastFocused) lastFocused.focus({ preventScroll: true });
 }
 
 /* ==================================================================== tabs */
@@ -435,5 +450,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('modal');
   modal?.querySelector('.m-close')?.addEventListener('click', closeModal);
   modal?.querySelector('.m-backdrop')?.addEventListener('click', closeModal);
+  // a CTA pointing at an anchor on this page closes the modal so the scroll lands
+  modal?.addEventListener('click', e => {
+    if (e.target.closest('[data-close-modal]')) closeModal();
+  });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 });
