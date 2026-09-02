@@ -254,12 +254,25 @@ img{max-width:100%;display:block}
 @media (max-width:960px){.team{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:560px){.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .member{margin:0}
+/* the photo is the link to that person's LinkedIn */
+.member-link{display:block;position:relative;width:100%;max-width:132px;border-radius:50%}
 .member img{
-  display:block;width:100%;max-width:132px;height:auto;aspect-ratio:1;border-radius:50%;
+  display:block;width:100%;height:auto;aspect-ratio:1;border-radius:50%;
   object-fit:cover;background:var(--line-dark);
   border:2px solid var(--line-dark);transition:border-color .18s ease;
 }
-.member:hover img{border-color:var(--red)}
+.member-link:hover img,
+.member-link:focus-visible img{border-color:var(--red)}
+/* LinkedIn mark, so the circle reads as clickable */
+.member-link .badge{
+  position:absolute;right:2px;bottom:2px;width:28px;height:28px;border-radius:50%;
+  background:var(--dark);border:2px solid var(--line-dark);
+  display:grid;place-items:center;
+  transition:background .18s ease,border-color .18s ease;
+}
+.member-link .badge svg{width:13px;height:13px;fill:#fff;display:block}
+.member-link:hover .badge,
+.member-link:focus-visible .badge{background:var(--red);border-color:var(--red)}
 .member figcaption{margin-top:14px}
 .member .n{font-size:clamp(15px,1.4vw,19px);font-weight:800;letter-spacing:-.02em;color:#fff;line-height:1.15}
 .member .r{font-size:clamp(12px,1.1vw,14px);color:var(--red);margin-top:6px;line-height:1.35;font-weight:700}
