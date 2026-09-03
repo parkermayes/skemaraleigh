@@ -95,6 +95,19 @@ LOCATION:Online\, Applications are submitted online
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260910-club-meetup@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260910T153000Z
+DTEND:20260910T162000Z
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
+ e next event\, role updates\, and whatever the room needs. Anyone can walk
+  in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20260911-accelerator-cohort-announced@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260911T160000Z
@@ -174,6 +187,19 @@ LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260924-club-meetup@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260924T153000Z
+DTEND:20260924T162000Z
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
+ e next event\, role updates\, and whatever the room needs. Anyone can walk
+  in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20260929-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260929T153000Z
@@ -228,6 +254,19 @@ LOCATION:Venture I\, Room 106\, Venture I\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20261008-club-meetup@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261008T153000Z
+DTEND:20261008T162000Z
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
+ e next event\, role updates\, and whatever the room needs. Anyone can walk
+  in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20261013-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261013T153000Z
@@ -264,6 +303,19 @@ DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  yle.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture I\, Room 106\, Venture I\, Centennial Campus\, Raleigh\, N
  C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261022-club-meetup@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261022T153000Z
+DTEND:20261022T162000Z
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
+ e next event\, role updates\, and whatever the room needs. Anyone can walk
+  in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
@@ -319,6 +371,19 @@ LOCATION:Venture I\, Room 106\, Venture I\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20261105-club-meetup@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261105T163000Z
+DTEND:20261105T172000Z
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
+ e next event\, role updates\, and whatever the room needs. Anyone can walk
+  in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20261109-triangle-startup-collective@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261109T230000Z
@@ -370,6 +435,19 @@ DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  yle.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture I\, Room 106\, Venture I\, Centennial Campus\, Raleigh\, N
  C 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
+UID:20261119-club-meetup@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261119T163000Z
+DTEND:20261119T172000Z
+SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
+ e next event\, role updates\, and whatever the room needs. Anyone can walk
+  in.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT

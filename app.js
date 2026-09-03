@@ -163,11 +163,11 @@ function series({ first, every, until, skip = [], startTime, endTime, ...rest })
   return out;
 }
 
-/* Club meets every other Thursday, 11:30 to 12:20, through November.
+/* Club meets every Thursday, 11:30 to 12:20, through November.
    Nov 26 is Thanksgiving, so it is skipped. */
 const CLUB_MEETINGS = series({
   first: '2026-09-03',
-  every: 2,
+  every: 1,
   until: '2026-11-30',
   skip: ['2026-11-26'],
   startTime: '11:30',
