@@ -72,7 +72,7 @@ BEGIN:VEVENT
 UID:20260903-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260903T153000Z
-DTEND:20260903T162000Z
+DTEND:20260903T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -98,7 +98,7 @@ BEGIN:VEVENT
 UID:20260910-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260910T153000Z
-DTEND:20260910T162000Z
+DTEND:20260910T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -138,7 +138,7 @@ BEGIN:VEVENT
 UID:20260915-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260915T153000Z
-DTEND:20260915T162000Z
+DTEND:20260915T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -151,7 +151,7 @@ BEGIN:VEVENT
 UID:20260917-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260917T153000Z
-DTEND:20260917T162000Z
+DTEND:20260917T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -164,7 +164,7 @@ BEGIN:VEVENT
 UID:20260922-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260922T153000Z
-DTEND:20260922T162000Z
+DTEND:20260922T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -190,7 +190,7 @@ BEGIN:VEVENT
 UID:20260924-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260924T153000Z
-DTEND:20260924T162000Z
+DTEND:20260924T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -203,7 +203,7 @@ BEGIN:VEVENT
 UID:20260929-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260929T153000Z
-DTEND:20260929T162000Z
+DTEND:20260929T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -216,7 +216,7 @@ BEGIN:VEVENT
 UID:20261001-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261001T153000Z
-DTEND:20261001T162000Z
+DTEND:20261001T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -244,7 +244,7 @@ BEGIN:VEVENT
 UID:20261006-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261006T153000Z
-DTEND:20261006T162000Z
+DTEND:20261006T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -257,7 +257,7 @@ BEGIN:VEVENT
 UID:20261008-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261008T153000Z
-DTEND:20261008T162000Z
+DTEND:20261008T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -270,7 +270,7 @@ BEGIN:VEVENT
 UID:20261013-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261013T153000Z
-DTEND:20261013T162000Z
+DTEND:20261013T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -283,7 +283,7 @@ BEGIN:VEVENT
 UID:20261015-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261015T153000Z
-DTEND:20261015T162000Z
+DTEND:20261015T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -296,7 +296,7 @@ BEGIN:VEVENT
 UID:20261020-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261020T153000Z
-DTEND:20261020T162000Z
+DTEND:20261020T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -309,7 +309,7 @@ BEGIN:VEVENT
 UID:20261022-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261022T153000Z
-DTEND:20261022T162000Z
+DTEND:20261022T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -322,7 +322,7 @@ BEGIN:VEVENT
 UID:20261027-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261027T153000Z
-DTEND:20261027T162000Z
+DTEND:20261027T161500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -348,7 +348,7 @@ BEGIN:VEVENT
 UID:20261029-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261029T153000Z
-DTEND:20261029T162000Z
+DTEND:20261029T161500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -361,7 +361,7 @@ BEGIN:VEVENT
 UID:20261103-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261103T163000Z
-DTEND:20261103T172000Z
+DTEND:20261103T171500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -374,7 +374,7 @@ BEGIN:VEVENT
 UID:20261105-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261105T163000Z
-DTEND:20261105T172000Z
+DTEND:20261105T171500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -402,7 +402,7 @@ BEGIN:VEVENT
 UID:20261110-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261110T163000Z
-DTEND:20261110T172000Z
+DTEND:20261110T171500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -415,7 +415,7 @@ BEGIN:VEVENT
 UID:20261112-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261112T163000Z
-DTEND:20261112T172000Z
+DTEND:20261112T171500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -428,7 +428,7 @@ BEGIN:VEVENT
 UID:20261117-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261117T163000Z
-DTEND:20261117T172000Z
+DTEND:20261117T171500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st
@@ -441,7 +441,7 @@ BEGIN:VEVENT
 UID:20261119-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261119T163000Z
-DTEND:20261119T172000Z
+DTEND:20261119T171500Z
 SUMMARY:Club Meetup · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
  e next event\, role updates\, and whatever the room needs. Anyone can walk
@@ -465,7 +465,7 @@ BEGIN:VEVENT
 UID:20261124-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261124T163000Z
-DTEND:20261124T172000Z
+DTEND:20261124T171500Z
 SUMMARY:Accelerator Session · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:Weekly working session for the cohort. Real-time coaching on li
  ve problems: first customers\, pricing\, US market entry. Never lecture-st

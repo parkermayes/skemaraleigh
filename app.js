@@ -163,7 +163,7 @@ function series({ first, every, until, skip = [], startTime, endTime, ...rest })
   return out;
 }
 
-/* Club meets every Thursday, 11:30 to 12:20, through November.
+/* Club meets every Thursday, 11:30 to 12:15, through November.
    Nov 26 is Thanksgiving, so it is skipped. */
 const CLUB_MEETINGS = series({
   first: '2026-09-03',
@@ -171,8 +171,8 @@ const CLUB_MEETINGS = series({
   until: '2026-11-30',
   skip: ['2026-11-26'],
   startTime: '11:30',
-  endTime: '12:20',
-  time: '11:30 AM to 12:20 PM',
+  endTime: '12:15',
+  time: '11:30 AM to 12:15 PM',
   name: 'Club Meetup',
   desc: 'Open working meeting for the Entrepreneurship Club. Planning the next event, role updates, and whatever the room needs. Anyone can walk in.',
   where: 'Venture II, Room 144',
@@ -181,14 +181,14 @@ const CLUB_MEETINGS = series({
   cta: { label: 'Join the List', href: LINKS.list },
 });
 
-/* Accelerator cohort works every Tuesday, 11:30 to 12:20, Sep 15 through Nov 24. */
+/* Accelerator cohort works every Tuesday, 11:30 to 12:15, Sep 15 through Nov 24. */
 const ACCELERATOR_SESSIONS = series({
   first: '2026-09-15',
   every: 1,
   until: '2026-11-24',
   startTime: '11:30',
-  endTime: '12:20',
-  time: '11:30 AM to 12:20 PM',
+  endTime: '12:15',
+  time: '11:30 AM to 12:15 PM',
   name: 'Accelerator Session',
   desc: 'Weekly working session for the cohort. Real-time coaching on live problems: first customers, pricing, US market entry. Never lecture-style.',
   where: 'Venture I, Room 106',
