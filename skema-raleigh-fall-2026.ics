@@ -161,6 +161,23 @@ LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20260917-entrepalooza-2026@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20260917T210000Z
+DTEND:20260917T230000Z
+SUMMARY:Entrepalooza 2026 · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:NC State's annual entrepreneurship festival on Stafford Commons
+ \, free and open to everyone. Student and alumni ventures run interactive 
+ demos\, ten students pitch for $2\,000 in prizes in the Minute to Pitch It
+  competition\, and there is free Chick-fil-A\, Two Roosters ice cream and 
+ giveaways all evening. Hosted by NC State Entrepreneurship. Walk up day-of
+  or RSVP here: https://entrepreneurship.ncsu.edu/events-events/entrepalooz
+ a/.\n\nhttps://www.skemaraleigh.com
+LOCATION:Stafford Commons\, Talley Student Union\, 2610 Cates Ave\, Raleigh
+ \, NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20260922-accelerator-session@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20260922T153000Z
