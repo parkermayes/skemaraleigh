@@ -78,6 +78,18 @@ const ONE_OFFS = [
     cta: { label: 'Meet the Team', href: '#leadership' },
   },
   {
+    date: '2026-09-03',
+    start: '2026-09-03T11:30:00-04:00',
+    end:   '2026-09-03T12:15:00-04:00',
+    time: '11:30 AM to 12:15 PM',
+    name: 'Club Meetup',
+    track: 'club',
+    desc: 'Open working meeting for the Entrepreneurship Club. Planning the next event, role updates, and whatever the room needs. Anyone can walk in.',
+    where: 'Venture II, Room 144',
+    address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
+    cta: { label: 'Join the List', href: LINKS.list },
+  },
+  {
     date: '2026-09-07',
     start: '2026-09-07T23:59:00-04:00',
     end:   '2026-09-07T23:59:59-04:00',
@@ -176,13 +188,13 @@ function series({ first, every, until, skip = [], startTime, endTime, ...rest })
   return out;
 }
 
-/* Club meets every Thursday, 11:30 to 12:15, through November.
-   Nov 26 is Thanksgiving, so it is skipped. */
+/* Club meets every other Thursday, 11:30 to 12:15, through November. The
+   rhythm starts Sep 10; Sep 3 ran the week before and sits in ONE_OFFS.
+   Nothing in this series lands on Thanksgiving. */
 const CLUB_MEETINGS = series({
-  first: '2026-09-03',
-  every: 1,
+  first: '2026-09-10',
+  every: 2,
   until: '2026-11-30',
-  skip: ['2026-11-26'],
   startTime: '11:30',
   endTime: '12:15',
   time: '11:30 AM to 12:15 PM',
