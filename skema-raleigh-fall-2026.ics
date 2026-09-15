@@ -115,7 +115,7 @@ DTEND:20260911T163000Z
 SUMMARY:Accelerator Cohort Announced · SKEMA Entrepreneurs Raleigh
 DESCRIPTION:The Fall 2026 cohort is selected and announced: twelve ventures
   for twelve weeks\, with the first weekly working session on September 15 
- and Demo Day on November 19.\n\nhttps://www.skemaraleigh.com
+ and Demo Day on November 18.\n\nhttps://www.skemaraleigh.com
 LOCATION:Online\, Announced online to everyone who applied
 URL:https://www.skemaraleigh.com
 END:VEVENT
@@ -390,6 +390,17 @@ LOCATION:Venture I\, Room 106\, Venture I\, Centennial Campus\, Raleigh\, N
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
+UID:20261118-demo-day-showcase@skema-raleigh
+DTSTAMP:20260829T120000Z
+DTSTART:20261118T223000Z
+DTEND:20261119T003000Z
+SUMMARY:Demo Day & Showcase · SKEMA Entrepreneurs Raleigh
+DESCRIPTION:The capstone. Every accelerator venture presents real traction\
+ , streamed live to every SKEMA campus.\n\nhttps://www.skemaraleigh.com
+LOCATION:Hunt Library\, room TBD\, 1070 Partners Way\, Raleigh\, NC 27606
+URL:https://www.skemaraleigh.com
+END:VEVENT
+BEGIN:VEVENT
 UID:20261119-club-meetup@skema-raleigh
 DTSTAMP:20260829T120000Z
 DTSTART:20261119T163000Z
@@ -400,17 +411,6 @@ DESCRIPTION:Open working meeting for the Entrepreneurship Club. Planning th
   in.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
   NC 27606
-URL:https://www.skemaraleigh.com
-END:VEVENT
-BEGIN:VEVENT
-UID:20261119-demo-day-showcase@skema-raleigh
-DTSTAMP:20260829T120000Z
-DTSTART:20261119T223000Z
-DTEND:20261120T003000Z
-SUMMARY:Demo Day & Showcase · SKEMA Entrepreneurs Raleigh
-DESCRIPTION:The capstone. Every accelerator venture presents real traction\
- , streamed live to every SKEMA campus.\n\nhttps://www.skemaraleigh.com
-LOCATION:Hunt Library\, room TBD\, 1070 Partners Way\, Raleigh\, NC 27606
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
