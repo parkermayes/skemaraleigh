@@ -160,9 +160,9 @@ const ONE_OFFS = [
     time: '5:30 PM',
     name: 'Ecosystem Night',
     track: 'club',
-    desc: 'An evening with working founders at Raleigh Founded, walkable from campus. See real early-stage companies operating.',
-    where: 'Raleigh Founded, main classroom on the left as you walk in',
-    address: '1017 Main Campus Dr, Suite 1650 (Partners I), Raleigh, NC 27606',
+    desc: 'An evening with working founders. See real early-stage companies operating.',
+    where: 'Venture II, Room 144',
+    address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
     cta: { label: 'Get Details', href: LINKS.list },
   },
   {
