@@ -47,11 +47,10 @@ body{background:var(--dark)}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(231,67,60,0)}100%{box-shadow:0 0 0 0 rgba(231,67,60,0)}}
 
 .dd-title{
-  font-size:clamp(76px,19vw,280px);font-weight:800;letter-spacing:-.06em;line-height:.84;
+  font-size:clamp(50px,14vw,210px);font-weight:800;letter-spacing:-.06em;line-height:.9;
   color:#fff;margin-top:clamp(26px,3.4vw,44px);
-  text-transform:uppercase;
+  text-transform:uppercase;white-space:nowrap;
 }
-.dd-title span{display:block}
 .dd-title .outline{color:transparent;-webkit-text-stroke:clamp(1.5px,.28vw,3px) var(--red)}
 @supports not (-webkit-text-stroke:1px #000){.dd-title .outline{color:var(--red)}}
 
@@ -148,7 +147,7 @@ body{background:var(--dark)}
   <div class="wrap">
     <span class="dd-kicker rise"><span class="dot" aria-hidden="true"></span>SKEMA Accelerator &middot; Fall 2026</span>
 
-    <h1 class="dd-title rise d1"><span>Demo</span><span class="outline">Day</span></h1>
+    <h1 class="dd-title rise d1">Demo <span class="outline">Day</span></h1>
 
     <p class="dd-when rise d2">Tuesday, Nov 17<span class="sep" aria-hidden="true">/</span>5:30 PM</p>
     <p class="dd-where rise d2">Venture II Building, Room 144 &middot; Centennial Campus</p>
