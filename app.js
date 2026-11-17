@@ -172,10 +172,10 @@ const ONE_OFFS = [
     time: '5:30 PM',
     name: 'Demo Day & Showcase',
     track: 'accelerator',
-    desc: 'The capstone. Every accelerator venture presents real traction, streamed live to every SKEMA campus.',
-    where: 'Hunt Library, room TBD',
-    address: '1070 Partners Way, Raleigh, NC 27606',
-    cta: { label: 'Get Details', href: LINKS.list },
+    desc: 'The capstone of the accelerator. Seven student companies pitch live, share their biggest wins and hardest lessons, then take live Q&A from three investor judges. Free Chick-fil-A dinner for everyone who attends, and it is open to the public, so bring a friend. <a href="/demoday">See the details</a>.',
+    where: 'Venture II, Room 144',
+    address: 'Venture II, Centennial Campus, Raleigh, NC 27606',
+    cta: { label: 'See the Details', href: '/demoday' },
   },
 ];
 
@@ -433,7 +433,8 @@ function openModal(dateIso, name) {
     <p class="m-desc">${ev.desc}</p>
     ${isPast ? '' : `<div class="m-cta">
       <a class="btn btn--red" href="${ev.cta.href}" ${
-        ev.cta.href.startsWith('#') ? 'data-close-modal' : 'target="_blank" rel="noopener"'
+        ev.cta.href.startsWith('#') ? 'data-close-modal'
+          : ev.cta.href.startsWith('/') ? '' : 'target="_blank" rel="noopener"'
       }>${ev.cta.label} <span class="arw" aria-hidden="true">&rarr;</span></a>
     </div>`}`;
 

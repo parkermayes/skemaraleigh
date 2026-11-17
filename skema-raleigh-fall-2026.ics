@@ -297,8 +297,8 @@ LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
-UID:20261022-ronnen-harary-talk@skema-raleigh
-DTSTAMP:20261014T120000Z
+UID:20261022-no-experience-necessary-with-ronnen-harary@skema-raleigh
+DTSTAMP:20260829T120000Z
 DTSTART:20261022T210000Z
 DTEND:20261022T223000Z
 SUMMARY:No Experience Necessary with Ronnen Harary · SKEMA Entrepreneurs R
@@ -312,8 +312,7 @@ DESCRIPTION:Ronnen Harary\, cofounder and chairman of Spin Master (PAW Patr
  is free on campus after 5. Hosted by NC State Entrepreneurship. Reserve a 
  spot here: https://www.eventbrite.com/e/no-experience-necessary-with-ronne
  n-harary-tickets-2002238710883.\n\nhttps://www.skemaraleigh.com
-LOCATION:Hunt Library Auditorium\, James B. Hunt Jr. Library\, 1070 Partner
- s Way\, Raleigh\, NC 27606
+LOCATION:Hunt Library Auditorium\, 1070 Partners Way\, Raleigh\, NC 27606
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT
@@ -335,8 +334,8 @@ DTSTAMP:20260829T120000Z
 DTSTART:20261027T213000Z
 DTEND:20261027T233000Z
 SUMMARY:Ecosystem Night · SKEMA Entrepreneurs Raleigh
-DESCRIPTION:An evening with working founders. See real early-stage compani
- es operating.\n\nhttps://www.skemaraleigh.com
+DESCRIPTION:An evening with working founders. See real early-stage companie
+ s operating.\n\nhttps://www.skemaraleigh.com
 LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
   NC 27606
 URL:https://www.skemaraleigh.com
@@ -414,9 +413,13 @@ DTSTAMP:20260829T120000Z
 DTSTART:20261117T223000Z
 DTEND:20261118T003000Z
 SUMMARY:Demo Day & Showcase · SKEMA Entrepreneurs Raleigh
-DESCRIPTION:The capstone. Every accelerator venture presents real traction\
- , streamed live to every SKEMA campus.\n\nhttps://www.skemaraleigh.com
-LOCATION:Hunt Library\, room TBD\, 1070 Partners Way\, Raleigh\, NC 27606
+DESCRIPTION:The capstone of the accelerator. Seven student companies pitch 
+ live\, share their biggest wins and hardest lessons\, then take live Q&A f
+ rom three investor judges. Free Chick-fil-A dinner for everyone who attend
+ s\, and it is open to the public\, so bring a friend. See the details: /de
+ moday.\n\nhttps://www.skemaraleigh.com
+LOCATION:Venture II\, Room 144\, Venture II\, Centennial Campus\, Raleigh\,
+  NC 27606
 URL:https://www.skemaraleigh.com
 END:VEVENT
 BEGIN:VEVENT

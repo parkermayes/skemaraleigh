@@ -30,6 +30,8 @@ const server = http.createServer((req, res) => {
     return;
   }
   if (pathname === '/') pathname = '/index.html';
+  // clean URLs: /demoday and /demoday/ serve demoday.html
+  else if (!path.extname(pathname)) pathname = pathname.replace(/\/+$/, '') + '.html';
 
   // resolve inside ROOT only — blocks ../ traversal
   const file = path.join(ROOT, path.normalize(pathname));

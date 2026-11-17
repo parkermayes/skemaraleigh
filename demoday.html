@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo Day · SKEMA Accelerator · Tuesday, Nov 17</title>
+<meta name="description" content="SKEMA Accelerator Demo Day: seven student companies pitch live to three investor judges. Tuesday, November 17 at 5:30 PM, Venture II, Room 144. Free Chick-fil-A dinner, open to the public.">
+<meta name="theme-color" content="#1C1B1A">
+<meta property="og:title" content="Demo Day · SKEMA Accelerator">
+<meta property="og:description" content="Seven companies. Three investor judges. One night. Tuesday, Nov 17 at 5:30 PM, Venture II, Room 144.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.skemaraleigh.com/demoday">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/favicon-180.png">
+<link rel="stylesheet" href="/styles.css?v=48">
+<style>
+/* ---------- Demo Day page ---------- */
+body{background:var(--dark)}
+
+/* hero: dark stage with a red spotlight */
+.dd-hero{
+  position:relative;overflow:hidden;color:#F2EFED;text-align:center;
+  padding:clamp(56px,9vw,128px) 0 clamp(64px,9vw,120px);
+  background:
+    radial-gradient(70% 60% at 50% 0%, rgba(231,67,60,.42), rgba(231,67,60,.12) 45%, rgba(231,67,60,0) 72%),
+    radial-gradient(40% 40% at 50% 110%, rgba(231,67,60,.18), rgba(231,67,60,0) 70%),
+    var(--dark);
+}
+/* faint grid floor, like a stage */
+.dd-hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size:56px 56px;
+  -webkit-mask-image:radial-gradient(80% 70% at 50% 40%, #000 20%, transparent 75%);
+          mask-image:radial-gradient(80% 70% at 50% 40%, #000 20%, transparent 75%);
+}
+.dd-hero .wrap{position:relative}
+
+.dd-kicker{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:clamp(11px,1vw,13px);font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:#fff;border:1.5px solid rgba(255,255,255,.22);padding:10px 16px;
+}
+.dd-kicker .dot{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(231,67,60,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(231,67,60,0)}100%{box-shadow:0 0 0 0 rgba(231,67,60,0)}}
+
+.dd-title{
+  font-size:clamp(76px,19vw,280px);font-weight:800;letter-spacing:-.06em;line-height:.84;
+  color:#fff;margin-top:clamp(26px,3.4vw,44px);
+  text-transform:uppercase;
+}
+.dd-title span{display:block}
+.dd-title .outline{color:transparent;-webkit-text-stroke:clamp(1.5px,.28vw,3px) var(--red)}
+@supports not (-webkit-text-stroke:1px #000){.dd-title .outline{color:var(--red)}}
+
+.dd-when{
+  margin-top:clamp(28px,3.6vw,46px);
+  font-size:clamp(20px,2.6vw,34px);font-weight:800;letter-spacing:-.025em;line-height:1.2;color:#fff;
+}
+.dd-when .sep{color:var(--red);padding-inline:.35em}
+.dd-where{margin-top:10px;font-size:clamp(15px,1.5vw,20px);color:var(--grey-dark)}
+
+/* countdown */
+.dd-cd{display:flex;justify-content:center;gap:clamp(8px,1.2vw,14px);margin-top:clamp(30px,3.6vw,44px);min-height:96px}
+.dd-cd .seg{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-width:clamp(70px,9vw,112px);padding:clamp(12px,1.4vw,18px) 8px;
+  border:1.5px solid var(--line-dark);background:rgba(28,27,26,.6);
+}
+.dd-cd .seg b{font-size:clamp(30px,4.6vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.dd-cd .seg i{font-style:normal;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-dark);margin-top:8px}
+.dd-cd .state{
+  align-self:center;font-size:clamp(16px,2vw,24px);font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+  color:#fff;background:var(--red);padding:18px 28px;
+}
+.dd-cd .state.done{background:transparent;border:1.5px solid var(--line-dark);color:var(--grey-dark)}
+
+.dd-hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:clamp(30px,3.6vw,44px)}
+.dd-hero .btn--ghost{color:#fff;border-color:rgba(255,255,255,.7)}
+.dd-hero .btn--ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/* stat band */
+.dd-stats{background:var(--paper);color:var(--ink)}
+.dd-stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.dd-stat{padding:clamp(30px,4vw,56px) clamp(10px,1.6vw,24px);border-right:1px solid var(--line);text-align:center}
+.dd-stat:last-child{border-right:0}
+.dd-stat b{display:block;font-size:clamp(54px,8vw,112px);font-weight:800;letter-spacing:-.06em;line-height:.9}
+.dd-stat:nth-child(2) b,.dd-stat:nth-child(3) b{color:var(--red)}
+.dd-stat span{display:block;margin-top:12px;font-size:clamp(11px,1vw,13px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--grey)}
+@media (max-width:720px){
+  .dd-stats .wrap{grid-template-columns:1fr 1fr}
+  .dd-stat:nth-child(2){border-right:0}
+  .dd-stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+
+/* what happens */
+.dd-body{background:var(--paper);color:var(--ink);border-top:1px solid var(--line);padding-block:clamp(48px,6vw,88px) clamp(64px,8vw,112px)}
+.dd-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,1.6vw,22px)}
+@media (max-width:900px){.dd-grid{grid-template-columns:1fr}}
+.dd-card{background:#fff;border:1px solid var(--line);padding:clamp(24px,2.6vw,36px);position:relative}
+.dd-card .n{font-size:11px;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--red)}
+.dd-card h3{font-size:clamp(24px,2.4vw,32px);font-weight:800;letter-spacing:-.03em;line-height:1.08;margin-top:14px}
+.dd-card p{font-size:clamp(15px,1.3vw,17px);line-height:1.55;color:var(--grey);margin-top:12px}
+.dd-card--red{background:var(--dark);border-color:var(--dark);color:#fff}
+.dd-card--red h3{color:var(--red)}
+.dd-card--red p{color:var(--grey-dark)}
+
+/* bring a friend */
+.dd-cta{background:var(--red);color:#fff;text-align:center}
+.dd-cta h2{font-size:clamp(40px,7vw,96px);font-weight:800;letter-spacing:-.045em;line-height:.98;max-width:14ch;margin-inline:auto}
+.dd-cta .p{font-size:clamp(16px,1.5vw,21px);line-height:1.5;margin:22px auto 0;max-width:54ch;color:rgba(255,255,255,.92)}
+.dd-cta .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:34px}
+.dd-cta .btn{background:#fff;color:var(--ink);border-color:#fff}
+.dd-cta .btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dd-cta .btn--ghost{background:transparent;color:#fff}
+.dd-cta .btn--ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+
+/* entrance */
+@media (prefers-reduced-motion:no-preference){
+  .rise{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.3s}.rise.d4{animation-delay:.42s}.rise.d5{animation-delay:.54s}
+  @keyframes rise{to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="SKEMA Entrepreneurs Raleigh, home">
+      <img src="/assets/skema-logo.png" alt="SKEMA Business School">
+      <span class="div" aria-hidden="true"></span>
+      <span class="sub">Entrepreneurs<br><em>Raleigh</em></span>
+    </a>
+    <nav class="nav">
+      <a class="lnk" href="/#calendar">Calendar</a>
+      <a class="lnk" href="/#choose">Club</a>
+      <a class="btn btn--red" href="#details">Demo Day <span class="arw" aria-hidden="true">&rarr;</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="dd-hero">
+  <div class="wrap">
+    <span class="dd-kicker rise"><span class="dot" aria-hidden="true"></span>SKEMA Accelerator &middot; Fall 2026</span>
+
+    <h1 class="dd-title rise d1"><span>Demo</span><span class="outline">Day</span></h1>
+
+    <p class="dd-when rise d2">Tuesday, Nov 17<span class="sep" aria-hidden="true">/</span>5:30 PM</p>
+    <p class="dd-where rise d2">Venture II Building, Room 144 &middot; Centennial Campus</p>
+
+    <div class="dd-cd rise d3" id="cd" aria-live="polite"
+         data-start="2026-11-17T17:30:00-05:00" data-end="2026-11-17T19:30:00-05:00"></div>
+
+    <div class="cta-row rise d4">
+      <a class="btn btn--red" id="addcal" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=SKEMA+Accelerator+Demo+Day&amp;dates=20261117T223000Z/20261118T003000Z&amp;location=Venture+II,+Room+144,+Centennial+Campus,+Raleigh,+NC&amp;details=Seven+student+companies+pitch+live+to+three+investor+judges.+Free+Chick-fil-A+dinner.+Open+to+the+public.+www.skemaraleigh.com/demoday" target="_blank" rel="noopener">Add to Calendar <span class="arw" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn--ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Venture+II+Centennial+Campus+NC+State+Raleigh+NC" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</section>
+
+<section class="dd-stats" aria-label="Demo Day by the numbers">
+  <div class="wrap">
+    <div class="dd-stat"><b>12</b><span>Weeks of building</span></div>
+    <div class="dd-stat"><b>7</b><span>Companies pitching</span></div>
+    <div class="dd-stat"><b>3</b><span>Investor judges</span></div>
+    <div class="dd-stat"><b>1</b><span>Night</span></div>
+  </div>
+</section>
+
+<section class="dd-body" id="details">
+  <div class="wrap">
+    <div class="dd-grid">
+      <article class="dd-card">
+        <div class="n">01 &middot; The pitch</div>
+        <h3>Seven companies, live.</h3>
+        <p>Twelve weeks of customer conversations, late nights and hard-won lessons. Each team shares its biggest wins, what it learned the hard way, and where it&rsquo;s headed next.</p>
+      </article>
+      <article class="dd-card">
+        <div class="n">02 &middot; The hot seat</div>
+        <h3>Then it gets real.</h3>
+        <p>Three investor judges are at the table to put every team through live Q&amp;A. No script for that part.</p>
+      </article>
+      <article class="dd-card dd-card--red">
+        <div class="n">03 &middot; The food</div>
+        <h3>Free Chick-fil-A dinner.</h3>
+        <p>For everyone who attends. We ran out last time, so we ordered more. Come for the pitches, stay for the nuggets.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section dd-cta">
+  <div class="wrap">
+    <h2>Open to the public. Bring a friend.</h2>
+    <p class="p">Local founders, mentors, faculty, and anyone curious about what&rsquo;s being built here. All welcome. Come cheer on the teams.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Venture+II+Centennial+Campus+NC+State+Raleigh+NC" target="_blank" rel="noopener">Venture II, Room 144 <span class="arw" aria-hidden="true">&rarr;</span></a>
+      <a class="btn btn--ghost" href="/#calendar">See the Full Calendar</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="f-brand">
+      <img src="/assets/skema-logo-light.png" alt="SKEMA Business School">
+      <span class="f-sub">Entrepreneurs<br><em>Raleigh</em></span>
+    </div>
+    <div class="col">
+      <b>Where</b>
+      Venture II, Room 144<br>
+      Centennial Campus, NC State<br>
+      Raleigh, NC
+    </div>
+    <div class="col">
+      <b>When</b>
+      Tuesday, November 17<br>
+      5:30 PM
+    </div>
+    <div class="col">
+      <b>Stay in the Loop</b>
+      <a href="/">SKEMA Entrepreneurs Raleigh</a><br>
+      <a href="https://forms.cloud.microsoft/e/wnPZEM1FtH" target="_blank" rel="noopener">Mailing List</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var el = document.getElementById('cd');
+  var start = new Date(el.dataset.start).getTime();
+  var end = new Date(el.dataset.end).getTime();
+  var timer;
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function seg(v, l) { return '<span class="seg"><b>' + pad(v) + '</b><i>' + l + '</i></span>'; }
+  function tick() {
+    var now = Date.now();
+    if (now >= end) {
+      el.innerHTML = '<span class="state done">That&rsquo;s a wrap. Thank you!</span>';
+      document.getElementById('addcal').hidden = true;
+      clearInterval(timer);
+      return;
+    }
+    if (now >= start) {
+      el.innerHTML = '<span class="state">Happening now &middot; Room 144</span>';
+      return;
+    }
+    var s = Math.floor((start - now) / 1000);
+    var d = Math.floor(s / 86400), h = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60);
+    el.innerHTML = (d ? seg(d, 'days') : '') + seg(h, 'hrs') + seg(m, 'min') + seg(s % 60, 'sec');
+  }
+  tick();
+  timer = setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
